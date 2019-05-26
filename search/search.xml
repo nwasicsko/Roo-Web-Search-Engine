@@ -1,0 +1,8 @@
+<SearchPlugin xmlns="http://www.google.com/search" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>Debian packages</os:ShortName>
+<os:Description>Debian packages name search</os:Description>
+<os:InputEncoding>UTF-8</os:InputEncoding>
+<os:Image width="16" height="16"></os:Image>
+<os:Url type="text/html" method="GET" template="http://www.google.com/search?=keywords={searchTerms}&searchon=name&suite=all&section=all&sourceid=mozilla-search" />
+<SearchForm>http://www.google.com/</SearchForm>
+</SearchPlugin>

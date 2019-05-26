@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+
+<title>FeedWind</title>
+<style type="text/css">
+#loading {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	padding: 20px;
+	left: 100%;
+	top: 50%;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="jquery.js"></script> 
+<style type="text/css">.imgLiquid img {visibility:hidden}</style></head>
+<body><style type="text/css">
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {border: none;font-family: inherit;font-size: 100%;font-style: inherit;font-weight: inherit;margin: 0;outline: none;padding: 0;vertical-align: baseline;}
+	html{
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	/*overflow-y: scroll;  Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */}
+	em{font-style:italic;}
+	body{margin:0;padding:0;overflow-x:hidden;}
+	img{border:none;}
+	a{text-decoration: none;}
+	#fw-container{width:100%;margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;font-size:16px;border:1px solid #dbdee1;border-radius:5px;overflow:hidden;box-sizing:border-box;text-align: left;}
+	header{margin:0;padding:0;background-color:red;background-image:none;font-size:16px;}
+	header .fw-feed-title{margin:0 20px;padding:20px 0 15px 0;word-wrap:break-word;}
+	header .fw-feed-title a:link{color:#f8fdff;}
+	header .fw-feed-title a:hover{color:#f8fdff;}
+	header .fw-feed-title a:visited{color:#f8fdff;}
+	#fw-feed-items-scroll-area{background-color:#ffffff; background-image:none; width: 1px; min-width: 100%; overflow:hidden;}
+
+	#fw-feed-items{margin:0;padding:0; overflow:hidden;}
+	
+	#fw-feed-items .fw-feed-item{margin:0;padding:20px 0;clear:both;border-bottom: 1px dashed #CCCCCC;}
+	#fw-feed-items .fw-feed-item:hover{margin:0;padding:20px 0;;clear:both;}
+	
+	#fw-feed-items .fw-feed-item-url{display: block;overflow: hidden;}
+	#fw-feed-items .fw-feed-item-url[onclick] { cursor: pointer;}	#fw-feed-items .fw-feed-multimediaplayer {position: relative;width: 100%;padding-top: 56.25%;}
+	#fw-feed-items .fw-feed-multimediaplayer iframe {position: absolute;top: 0;right: 0;width: 100% !important;height: 100% !important;}
+   	.fw-feed-item-image-module{margin:0 0 0 5px; padding:0;float:left;}	.fw-feed-item-image-module {margin:0 5px 0 5px;float: right;}		.fw-feed-title{margin:0 20px;padding:20px 0 15px 0;word-wrap:break-word;}
+		#fw-feed-items .fw-feed-item-image{margin:0; padding:0;width:110px;height:100px;overflow:hidden;}
+    	#fw-feed-items .fw-feed-item-content-module{margin:0 0 0 5px;padding:0 0 0 5px;overflow:hidden; }
+	#fw-feed-items .fw-feed-item-more-link{margin:0 2px 0 0;padding:0 2px 0 0;color:red;line-height:1.5;font-size:12px;overflow:hidden;}
+	#fw-feed-items .fw-feed-item-title{margin:0 2px 0 0;padding:0 2px 0 0;color:red;line-height:1.5;font-size:16px;overflow:hidden;display:block;}
+	#fw-feed-items .fw-feed-item-description{margin:0 2px 0 0;padding:0 2px 0 0;color:black;word-wrap:break-word;line-height:1.5;font-size:12px;overflow: hidden;display: block;}
+	#fw-feed-items .fw-feed-item-date{margin:5px 0 0 0;padding:0px;font-size:12px;color:red;overflow:hidden;text-overflow:ellipsis;display:block;}/***非表示の場合はdisplay:none***/
+	#fw-feed-items .fw-feed-item-link{margin:0;padding:0;font-size:12px;color:red;overflow:hidden;text-overflow:ellipsis;display:block;}/***非表示の場合はdisplay:none***/   </style><div id="fw-container" style="height: 359px;">	<header>
+		<div class="fw-feed-title"><a href="https://news.google.com/search?q=Makeup+Trends&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" target="_blank">Roo News</a></div>
+	</header>	<div id="fw-feed-items-scroll-area" class="scroll-pane jspScrollable" style="height: 306px; overflow: hidden; padding: 0px; width: 728px;" tabindex="0">
+		
+	<div class="jspContainer" style="width: 728px; height: 306px;"><div class="jspPane" style="padding: 0px; top: 0px; width: 714px;"><div id="fw-feed-items" style="margin-top: -0.425753px;">				 <!--fw-feed-item-->				 <!--fw-feed-item-->				 <!--fw-feed-item-->				 <!--fw-feed-item-->				 <!--fw-feed-item-->				 <!--fw-feed-item-->				<div class="fw-feed-item fw-item-">					<div class="fw-feed-item-url" onclick="window.open('https://operanewsnow.com/global-makeup-cotton-market-insight-report-2019-2025-selena-canmake-dasio-muji-watsons-kiss-me-shiseido/55265/' , '_blank')">						<div class="fw-feed-item-image-module">
+							<div class="fw-feed-item-image imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;https://lh3.googleusercontent.com/proxy/wTToUYIPSF14XNRB7lwncH8goHsS1QBJvqrZWe2W6wgtknC17eWLq-i0pSsJnzu7-9elssihk3ELFNr2laHxmdHgkmY-AuNPXwb3UX6_e7hyvwW7BqTlAbAml7ZRAiqdk_9vqZkP=-w150-h150-c&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">								<img data-fw-img-src="https://lh3.googleusercontent.com/proxy/wTToUYIPSF14XNRB7lwncH8goHsS1QBJvqrZWe2W6wgtknC17eWLq-i0pSsJnzu7-9elssihk3ELFNr2laHxmdHgkmY-AuNPXwb3UX6_e7hyvwW7BqTlAbAml7ZRAiqdk_9vqZkP=-w150-h150-c" src="a_data_003/wTToUYIPSF14XNRB7lwncH8goHsS1QBJvqrZWe2W6wgtknC17eWLq-i0pSs.jpeg" style="display: none;">							</div>
+						</div>					
+						<div class="fw-feed-item-content-module">							<span class="fw-feed-item-title"> Global Makeup Cotton Market Insight Report 2019 -202...</span>							<span class="fw-feed-item-description">Global Makeup Cotton Market Insight Report 2019 -2025 : Selena, Canmake, Dasio, MUJI, Watsons, Ki...</span>							<span class="fw-feed-item-date">Apr 10, 2019  8:02 AM</span>						</div>
+					</div>
+				</div> <!--fw-feed-item-->				<div class="fw-feed-item fw-item-">					<div class="fw-feed-item-url" onclick="window.open('https://dailytimes.com.pk/375140/90s-trends-make-a-comeback/' , '_blank')">					
+						<div class="fw-feed-item-content-module">							<span class="fw-feed-item-title"> ’90s trends make a comeback - Daily Times</span>							<span class="fw-feed-item-description">’90s trends make a comeback &nbsp;&nbsp; Daily Times Bitter but true, we had a horrible fashion sense back ...</span>							<span class="fw-feed-item-date">Apr 10, 2019  2:45 AM</span>						</div>
+					</div>
+				</div> <!--fw-feed-item-->				<div class="fw-feed-item fw-item-">					<div class="fw-feed-item-url" onclick="window.open('http://thenewsmates.com/2019/04/09/64311/cosmetic-pigments-market-2019-top-companies-market-trends-and-growth-factorschallenges-with-forecast-to-2024/' , '_blank')">						<div class="fw-feed-item-image-module">
+							<div class="fw-feed-item-image imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;https://lh6.googleusercontent.com/proxy/D2rlIN8hcm4yNyCBea5MaFTVWRfbh8fSt6j01oGchV8fTLMvI_REbAPWl1_qAMzzVz1lMXg3jvInT5k=-w150-h150-c&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">								<img data-fw-img-src="https://lh6.googleusercontent.com/proxy/D2rlIN8hcm4yNyCBea5MaFTVWRfbh8fSt6j01oGchV8fTLMvI_REbAPWl1_qAMzzVz1lMXg3jvInT5k=-w150-h150-c" src="a_data_003/D2rlIN8hcm4yNyCBea5MaFTVWRfbh8fSt6j01oGchV8fTLMvI_REbAPWl1_q.png" style="display: none;">							</div>
+						</div>					
+						<div class="fw-feed-item-content-module">							<span class="fw-feed-item-title"> Cosmetic Pigments Market 2019: Top Companies, Market...</span>							<span class="fw-feed-item-description">Cosmetic Pigments Market 2019: Top Companies, Market Trends and Growth Factors,Challenges with Fo...</span>							<span class="fw-feed-item-date">Apr 10, 2019  1:51 AM</span>						</div>
+					</div>
+				</div> <!--fw-feed-item-->				<div class="fw-feed-item fw-item-">					<div class="fw-feed-item-url" onclick="window.open('http://b2bnewz.com/12788/global-halal-mascara-market-2019-amara-cosmetics-inika-cosmetics-mma-bio-lab-sdn-bhd-golden-rose-sampure-mirror-and-makeup-london-phb-ethical-beauty-zuii-certified-organics/' , '_blank')">						<div class="fw-feed-item-image-module">
+							<div class="fw-feed-item-image imgLiquid_bgSize imgLiquid_ready" style="background-image: url(&quot;https://lh4.googleusercontent.com/proxy/0IzGowoy9hlPK4w59rwjT9AA0dugtMJ068y1cJTgpplpmWLUpPiONL8h_a9zKNpKCYFeZosZQkwoKwQehvg8dmZFA7rWchbfepFDeMRC6NRYgBO_javdriw=-w150-h150-c&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">								<img data-fw-img-src="https://lh4.googleusercontent.com/proxy/0IzGowoy9hlPK4w59rwjT9AA0dugtMJ068y1cJTgpplpmWLUpPiONL8h_a9zKNpKCYFeZosZQkwoKwQehvg8dmZFA7rWchbfepFDeMRC6NRYgBO_javdriw=-w150-h150-c" src="a_data_003/0IzGowoy9hlPK4w59rwjT9AA0dugtMJ068y1cJTgpplpmWLUpPiONL8h_a9.jpeg" style="display: none;">							</div>
+						</div>					
+						<div class="fw-feed-item-content-module">							<span class="fw-feed-item-title"> Global Halal Mascara Market 2019 – Amara Cosmetics, ...</span>							<span class="fw-feed-item-description">Global Halal Mascara Market 2019 – Amara Cosmetics, INIKA Cosmetics, MMA BIO LAB SDN BHD, Golden ...</span>							<span class="fw-feed-item-date">Apr  9, 2019  9:28 PM</span>						</div>
+					</div>
+				</div><div class="fw-feed-item fw-item-">					<div class="fw-feed-item-url" onclick="window.open('https://www.cbc.ca/news/business/change-job-market-2030-1.5086022' , '_blank')">					
+						<div class="fw-feed-item-content-module">							<span class="fw-feed-item-title"> 7 surprising things that could change the job market...</span>							<span class="fw-feed-item-description">7 surprising things that could change the job market by 2030 &nbsp;&nbsp; CBC News Everyone expects automat...</span>							<span class="fw-feed-item-date">Apr 10, 2019 12:08 PM</span>						</div>
+					</div>
+				</div><div class="fw-feed-item fw-item-">					<div class="fw-feed-item-url" onclick="window.open('https://www.vox.com/the-goods/2019/4/10/18302108/noticed-70s-fonts-serifs-chobani-flesh-glossier-play' , '_blank')">					
+						<div class="fw-feed-item-content-module">							<span class="fw-feed-item-title"> Chobani, Glossier, and more are branching out into ’...</span>							<span class="fw-feed-item-description">Chobani, Glossier, and more are branching out into ’70s-style serif fonts &nbsp;&nbsp; Vox.com Welcome to N...</span>							<span class="fw-feed-item-date">Apr 10, 2019 11:00 AM</span>						</div>
+					</div>
+				</div><div class="fw-feed-item fw-item-">					<div class="fw-feed-item-url" onclick="window.open('https://tcbresistencias.com/global-makeup-brushes-market-2019-cagr-rise-sales-5-4-by-2028/' , '_blank')">					
+						<div class="fw-feed-item-content-module">							<span class="fw-feed-item-title"> Global Makeup Brushes Market 2019 CAGR Rise Sales 5....</span>							<span class="fw-feed-item-description">Global Makeup Brushes Market 2019 CAGR Rise Sales 5.4% By 2028 &nbsp;&nbsp; tcbresistencias.com Global Make...</span>							<span class="fw-feed-item-date">Apr 10, 2019  9:56 AM</span>						</div>
+					</div>
+				</div><div class="fw-feed-item fw-item-">					<div class="fw-feed-item-url" onclick="window.open('https://www.hindustantimes.com/fashion-and-trends/airport-looks-2019-anushka-sharma-s-most-stylish-airport-looks/story-nlumaSieYdyzgSC3tjGiXM.html' , '_blank')">					
+						<div class="fw-feed-item-content-module">							<span class="fw-feed-item-title"> Anushka Sharma’s most stylish airport looks - Hindus...</span>							<span class="fw-feed-item-description">Anushka Sharma’s most stylish airport looks &nbsp;&nbsp; Hindustan Times Airport looks 2019: Anushka Sharma...</span>							<span class="fw-feed-item-date">Apr 10, 2019  9:44 AM</span>						</div>
+					</div>
+				</div><div class="fw-feed-item fw-item-">					<div class="fw-feed-item-url" onclick="window.open('https://themarketresearchnews.com/2019/04/10/beauty-tools-market-latest-trend-and-technology-advancement-in-beauty-industry-2019/' , '_blank')">					
+						<div class="fw-feed-item-content-module">							<span class="fw-feed-item-title"> Beauty Tools Market Latest Trend and technology Adva...</span>							<span class="fw-feed-item-description">Beauty Tools Market Latest Trend and technology Advancement in Beauty industry 2019 &nbsp;&nbsp; The Market...</span>							<span class="fw-feed-item-date">Apr 10, 2019  9:20 AM</span>						</div>
+					</div>
+				</div><div class="fw-feed-item fw-item-">					<div class="fw-feed-item-url" onclick="window.open('https://themarketresearchnews.com/2019/04/10/according-to-latest-research-on-makeup-removing-lotion-market-focusing-on-leading-manufacturers-loreal-avon-products-beiersdorf-nivea-estee-lauder-johnson-johnsonneutrogena-physicia/' , '_blank')">					
+						<div class="fw-feed-item-content-module">							<span class="fw-feed-item-title"> According to latest research on Makeup Removing Loti...</span>							<span class="fw-feed-item-description">According to latest research on Makeup Removing Lotion market focusing on leading manufacturers L...</span>							<span class="fw-feed-item-date">Apr 10, 2019  9:20 AM</span>						</div>
+					</div>
+				</div> <!--fw-feed-item-->		</div></div><div class="jspVerticalBar" style="visibility: hidden;"><div class="jspCap jspCapTop"></div><div class="jspTrack" style="height: 306px;"><div class="jspDrag" style="height: 82px; top: 0px;"><div class="jspDragTop"></div><div class="jspDragBottom"></div></div></div><div class="jspCap jspCapBottom"></div></div></div></div>	
+</div> 
+<style type="text/css">
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */@font-face{font-family:'FontAwesome';src:url('//feed.mikle.com/fonts/fontawesome-webfont.eot?v=1552929744');src:url('//feed.mikle.com/fonts/fontawesome-webfont.eot?#iefix&v=1552929744') format('embedded-opentype'),url('//feed.mikle.com/fonts/fontawesome-webfont.woff2?v=1552929744') format('woff2'),url('//feed.mikle.com/fonts/fontawesome-webfont.woff?v=1552929744') format('woff'),url('//feed.mikle.com/fonts/fontawesome-webfont.ttf?v=1552929744') format('truetype'),url('//feed.mikle.com/fonts/fontawesome-webfont.svg?v=1552929744#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-fw{width:1.28571429em;text-align:center}.fa-ul{padding-left:0;margin-left:2.14285714em;list-style-type:none}.fa-ul>li{position:relative}.fa-li{position:absolute;left:-2.14285714em;width:2.14285714em;top:.14285714em;text-align:center}.fa-li.fa-lg{left:-1.85714286em}.fa-border{padding:.2em .25em .15em;border:solid .08em #eee;border-radius:.1em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left{margin-right:.3em}.fa.fa-pull-right{margin-left:.3em}.pull-right{float:right}.pull-left{float:left}.fa.pull-left{margin-right:.3em}.fa.pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.fa-rotate-90{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";-webkit-transform:rotate(270deg);-ms-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";-webkit-transform:scale(-1, 1);-ms-transform:scale(-1, 1);transform:scale(-1, 1)}.fa-flip-vertical{-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";-webkit-transform:scale(1, -1);-ms-transform:scale(1, -1);transform:scale(1, -1)}:root .fa-rotate-90,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-flip-horizontal,:root .fa-flip-vertical{filter:none}.fa-stack{position:relative;display:inline-block;width:2em;height:2em;line-height:2em;vertical-align:middle}.fa-stack-1x,.fa-stack-2x{position:absolute;left:0;width:100%;text-align:center}.fa-stack-1x{line-height:inherit}.fa-stack-2x{font-size:2em}.fa-inverse{color:#fff}.fa-glass:before{content:"\f000"}.fa-music:before{content:"\f001"}.fa-search:before{content:"\f002"}.fa-envelope-o:before{content:"\f003"}.fa-heart:before{content:"\f004"}.fa-star:before{content:"\f005"}.fa-star-o:before{content:"\f006"}.fa-user:before{content:"\f007"}.fa-film:before{content:"\f008"}.fa-th-large:before{content:"\f009"}.fa-th:before{content:"\f00a"}.fa-th-list:before{content:"\f00b"}.fa-check:before{content:"\f00c"}.fa-remove:before,.fa-close:before,.fa-times:before{content:"\f00d"}.fa-search-plus:before{content:"\f00e"}.fa-search-minus:before{content:"\f010"}.fa-power-off:before{content:"\f011"}.fa-signal:before{content:"\f012"}.fa-gear:before,.fa-cog:before{content:"\f013"}.fa-trash-o:before{content:"\f014"}.fa-home:before{content:"\f015"}.fa-file-o:before{content:"\f016"}.fa-clock-o:before{content:"\f017"}.fa-road:before{content:"\f018"}.fa-download:before{content:"\f019"}.fa-arrow-circle-o-down:before{content:"\f01a"}.fa-arrow-circle-o-up:before{content:"\f01b"}.fa-inbox:before{content:"\f01c"}.fa-play-circle-o:before{content:"\f01d"}.fa-rotate-right:before,.fa-repeat:before{content:"\f01e"}.fa-refresh:before{content:"\f021"}.fa-list-alt:before{content:"\f022"}.fa-lock:before{content:"\f023"}.fa-flag:before{content:"\f024"}.fa-headphones:before{content:"\f025"}.fa-volume-off:before{content:"\f026"}.fa-volume-down:before{content:"\f027"}.fa-volume-up:before{content:"\f028"}.fa-qrcode:before{content:"\f029"}.fa-barcode:before{content:"\f02a"}.fa-tag:before{content:"\f02b"}.fa-tags:before{content:"\f02c"}.fa-book:before{content:"\f02d"}.fa-bookmark:before{content:"\f02e"}.fa-print:before{content:"\f02f"}.fa-camera:before{content:"\f030"}.fa-font:before{content:"\f031"}.fa-bold:before{content:"\f032"}.fa-italic:before{content:"\f033"}.fa-text-height:before{content:"\f034"}.fa-text-width:before{content:"\f035"}.fa-align-left:before{content:"\f036"}.fa-align-center:before{content:"\f037"}.fa-align-right:before{content:"\f038"}.fa-align-justify:before{content:"\f039"}.fa-list:before{content:"\f03a"}.fa-dedent:before,.fa-outdent:before{content:"\f03b"}.fa-indent:before{content:"\f03c"}.fa-video-camera:before{content:"\f03d"}.fa-photo:before,.fa-image:before,.fa-picture-o:before{content:"\f03e"}.fa-pencil:before{content:"\f040"}.fa-map-marker:before{content:"\f041"}.fa-adjust:before{content:"\f042"}.fa-tint:before{content:"\f043"}.fa-edit:before,.fa-pencil-square-o:before{content:"\f044"}.fa-share-square-o:before{content:"\f045"}.fa-check-square-o:before{content:"\f046"}.fa-arrows:before{content:"\f047"}.fa-step-backward:before{content:"\f048"}.fa-fast-backward:before{content:"\f049"}.fa-backward:before{content:"\f04a"}.fa-play:before{content:"\f04b"}.fa-pause:before{content:"\f04c"}.fa-stop:before{content:"\f04d"}.fa-forward:before{content:"\f04e"}.fa-fast-forward:before{content:"\f050"}.fa-step-forward:before{content:"\f051"}.fa-eject:before{content:"\f052"}.fa-chevron-left:before{content:"\f053"}.fa-chevron-right:before{content:"\f054"}.fa-plus-circle:before{content:"\f055"}.fa-minus-circle:before{content:"\f056"}.fa-times-circle:before{content:"\f057"}.fa-check-circle:before{content:"\f058"}.fa-question-circle:before{content:"\f059"}.fa-info-circle:before{content:"\f05a"}.fa-crosshairs:before{content:"\f05b"}.fa-times-circle-o:before{content:"\f05c"}.fa-check-circle-o:before{content:"\f05d"}.fa-ban:before{content:"\f05e"}.fa-arrow-left:before{content:"\f060"}.fa-arrow-right:before{content:"\f061"}.fa-arrow-up:before{content:"\f062"}.fa-arrow-down:before{content:"\f063"}.fa-mail-forward:before,.fa-share:before{content:"\f064"}.fa-expand:before{content:"\f065"}.fa-compress:before{content:"\f066"}.fa-plus:before{content:"\f067"}.fa-minus:before{content:"\f068"}.fa-asterisk:before{content:"\f069"}.fa-exclamation-circle:before{content:"\f06a"}.fa-gift:before{content:"\f06b"}.fa-leaf:before{content:"\f06c"}.fa-fire:before{content:"\f06d"}.fa-eye:before{content:"\f06e"}.fa-eye-slash:before{content:"\f070"}.fa-warning:before,.fa-exclamation-triangle:before{content:"\f071"}.fa-plane:before{content:"\f072"}.fa-calendar:before{content:"\f073"}.fa-random:before{content:"\f074"}.fa-comment:before{content:"\f075"}.fa-magnet:before{content:"\f076"}.fa-chevron-up:before{content:"\f077"}.fa-chevron-down:before{content:"\f078"}.fa-retweet:before{content:"\f079"}.fa-shopping-cart:before{content:"\f07a"}.fa-folder:before{content:"\f07b"}.fa-folder-open:before{content:"\f07c"}.fa-arrows-v:before{content:"\f07d"}.fa-arrows-h:before{content:"\f07e"}.fa-bar-chart-o:before,.fa-bar-chart:before{content:"\f080"}.fa-twitter-square:before{content:"\f081"}.fa-facebook-square:before{content:"\f082"}.fa-camera-retro:before{content:"\f083"}.fa-key:before{content:"\f084"}.fa-gears:before,.fa-cogs:before{content:"\f085"}.fa-comments:before{content:"\f086"}.fa-thumbs-o-up:before{content:"\f087"}.fa-thumbs-o-down:before{content:"\f088"}.fa-star-half:before{content:"\f089"}.fa-heart-o:before{content:"\f08a"}.fa-sign-out:before{content:"\f08b"}.fa-linkedin-square:before{content:"\f08c"}.fa-thumb-tack:before{content:"\f08d"}.fa-external-link:before{content:"\f08e"}.fa-sign-in:before{content:"\f090"}.fa-trophy:before{content:"\f091"}.fa-github-square:before{content:"\f092"}.fa-upload:before{content:"\f093"}.fa-lemon-o:before{content:"\f094"}.fa-phone:before{content:"\f095"}.fa-square-o:before{content:"\f096"}.fa-bookmark-o:before{content:"\f097"}.fa-phone-square:before{content:"\f098"}.fa-twitter:before{content:"\f099"}.fa-facebook-f:before,.fa-facebook:before{content:"\f09a"}.fa-github:before{content:"\f09b"}.fa-unlock:before{content:"\f09c"}.fa-credit-card:before{content:"\f09d"}.fa-feed:before,.fa-rss:before{content:"\f09e"}.fa-hdd-o:before{content:"\f0a0"}.fa-bullhorn:before{content:"\f0a1"}.fa-bell:before{content:"\f0f3"}.fa-certificate:before{content:"\f0a3"}.fa-hand-o-right:before{content:"\f0a4"}.fa-hand-o-left:before{content:"\f0a5"}.fa-hand-o-up:before{content:"\f0a6"}.fa-hand-o-down:before{content:"\f0a7"}.fa-arrow-circle-left:before{content:"\f0a8"}.fa-arrow-circle-right:before{content:"\f0a9"}.fa-arrow-circle-up:before{content:"\f0aa"}.fa-arrow-circle-down:before{content:"\f0ab"}.fa-globe:before{content:"\f0ac"}.fa-wrench:before{content:"\f0ad"}.fa-tasks:before{content:"\f0ae"}.fa-filter:before{content:"\f0b0"}.fa-briefcase:before{content:"\f0b1"}.fa-arrows-alt:before{content:"\f0b2"}.fa-group:before,.fa-users:before{content:"\f0c0"}.fa-chain:before,.fa-link:before{content:"\f0c1"}.fa-cloud:before{content:"\f0c2"}.fa-flask:before{content:"\f0c3"}.fa-cut:before,.fa-scissors:before{content:"\f0c4"}.fa-copy:before,.fa-files-o:before{content:"\f0c5"}.fa-paperclip:before{content:"\f0c6"}.fa-save:before,.fa-floppy-o:before{content:"\f0c7"}.fa-square:before{content:"\f0c8"}.fa-navicon:before,.fa-reorder:before,.fa-bars:before{content:"\f0c9"}.fa-list-ul:before{content:"\f0ca"}.fa-list-ol:before{content:"\f0cb"}.fa-strikethrough:before{content:"\f0cc"}.fa-underline:before{content:"\f0cd"}.fa-table:before{content:"\f0ce"}.fa-magic:before{content:"\f0d0"}.fa-truck:before{content:"\f0d1"}.fa-pinterest:before{content:"\f0d2"}.fa-pinterest-square:before{content:"\f0d3"}.fa-google-plus-square:before{content:"\f0d4"}.fa-google-plus:before{content:"\f0d5"}.fa-money:before{content:"\f0d6"}.fa-caret-down:before{content:"\f0d7"}.fa-caret-up:before{content:"\f0d8"}.fa-caret-left:before{content:"\f0d9"}.fa-caret-right:before{content:"\f0da"}.fa-columns:before{content:"\f0db"}.fa-unsorted:before,.fa-sort:before{content:"\f0dc"}.fa-sort-down:before,.fa-sort-desc:before{content:"\f0dd"}.fa-sort-up:before,.fa-sort-asc:before{content:"\f0de"}.fa-envelope:before{content:"\f0e0"}.fa-linkedin:before{content:"\f0e1"}.fa-rotate-left:before,.fa-undo:before{content:"\f0e2"}.fa-legal:before,.fa-gavel:before{content:"\f0e3"}.fa-dashboard:before,.fa-tachometer:before{content:"\f0e4"}.fa-comment-o:before{content:"\f0e5"}.fa-comments-o:before{content:"\f0e6"}.fa-flash:before,.fa-bolt:before{content:"\f0e7"}.fa-sitemap:before{content:"\f0e8"}.fa-umbrella:before{content:"\f0e9"}.fa-paste:before,.fa-clipboard:before{content:"\f0ea"}.fa-lightbulb-o:before{content:"\f0eb"}.fa-exchange:before{content:"\f0ec"}.fa-cloud-download:before{content:"\f0ed"}.fa-cloud-upload:before{content:"\f0ee"}.fa-user-md:before{content:"\f0f0"}.fa-stethoscope:before{content:"\f0f1"}.fa-suitcase:before{content:"\f0f2"}.fa-bell-o:before{content:"\f0a2"}.fa-coffee:before{content:"\f0f4"}.fa-cutlery:before{content:"\f0f5"}.fa-file-text-o:before{content:"\f0f6"}.fa-building-o:before{content:"\f0f7"}.fa-hospital-o:before{content:"\f0f8"}.fa-ambulance:before{content:"\f0f9"}.fa-medkit:before{content:"\f0fa"}.fa-fighter-jet:before{content:"\f0fb"}.fa-beer:before{content:"\f0fc"}.fa-h-square:before{content:"\f0fd"}.fa-plus-square:before{content:"\f0fe"}.fa-angle-double-left:before{content:"\f100"}.fa-angle-double-right:before{content:"\f101"}.fa-angle-double-up:before{content:"\f102"}.fa-angle-double-down:before{content:"\f103"}.fa-angle-left:before{content:"\f104"}.fa-angle-right:before{content:"\f105"}.fa-angle-up:before{content:"\f106"}.fa-angle-down:before{content:"\f107"}.fa-desktop:before{content:"\f108"}.fa-laptop:before{content:"\f109"}.fa-tablet:before{content:"\f10a"}.fa-mobile-phone:before,.fa-mobile:before{content:"\f10b"}.fa-circle-o:before{content:"\f10c"}.fa-quote-left:before{content:"\f10d"}.fa-quote-right:before{content:"\f10e"}.fa-spinner:before{content:"\f110"}.fa-circle:before{content:"\f111"}.fa-mail-reply:before,.fa-reply:before{content:"\f112"}.fa-github-alt:before{content:"\f113"}.fa-folder-o:before{content:"\f114"}.fa-folder-open-o:before{content:"\f115"}.fa-smile-o:before{content:"\f118"}.fa-frown-o:before{content:"\f119"}.fa-meh-o:before{content:"\f11a"}.fa-gamepad:before{content:"\f11b"}.fa-keyboard-o:before{content:"\f11c"}.fa-flag-o:before{content:"\f11d"}.fa-flag-checkered:before{content:"\f11e"}.fa-terminal:before{content:"\f120"}.fa-code:before{content:"\f121"}.fa-mail-reply-all:before,.fa-reply-all:before{content:"\f122"}.fa-star-half-empty:before,.fa-star-half-full:before,.fa-star-half-o:before{content:"\f123"}.fa-location-arrow:before{content:"\f124"}.fa-crop:before{content:"\f125"}.fa-code-fork:before{content:"\f126"}.fa-unlink:before,.fa-chain-broken:before{content:"\f127"}.fa-question:before{content:"\f128"}.fa-info:before{content:"\f129"}.fa-exclamation:before{content:"\f12a"}.fa-superscript:before{content:"\f12b"}.fa-subscript:before{content:"\f12c"}.fa-eraser:before{content:"\f12d"}.fa-puzzle-piece:before{content:"\f12e"}.fa-microphone:before{content:"\f130"}.fa-microphone-slash:before{content:"\f131"}.fa-shield:before{content:"\f132"}.fa-calendar-o:before{content:"\f133"}.fa-fire-extinguisher:before{content:"\f134"}.fa-rocket:before{content:"\f135"}.fa-maxcdn:before{content:"\f136"}.fa-chevron-circle-left:before{content:"\f137"}.fa-chevron-circle-right:before{content:"\f138"}.fa-chevron-circle-up:before{content:"\f139"}.fa-chevron-circle-down:before{content:"\f13a"}.fa-html5:before{content:"\f13b"}.fa-css3:before{content:"\f13c"}.fa-anchor:before{content:"\f13d"}.fa-unlock-alt:before{content:"\f13e"}.fa-bullseye:before{content:"\f140"}.fa-ellipsis-h:before{content:"\f141"}.fa-ellipsis-v:before{content:"\f142"}.fa-rss-square:before{content:"\f143"}.fa-play-circle:before{content:"\f144"}.fa-ticket:before{content:"\f145"}.fa-minus-square:before{content:"\f146"}.fa-minus-square-o:before{content:"\f147"}.fa-level-up:before{content:"\f148"}.fa-level-down:before{content:"\f149"}.fa-check-square:before{content:"\f14a"}.fa-pencil-square:before{content:"\f14b"}.fa-external-link-square:before{content:"\f14c"}.fa-share-square:before{content:"\f14d"}.fa-compass:before{content:"\f14e"}.fa-toggle-down:before,.fa-caret-square-o-down:before{content:"\f150"}.fa-toggle-up:before,.fa-caret-square-o-up:before{content:"\f151"}.fa-toggle-right:before,.fa-caret-square-o-right:before{content:"\f152"}.fa-euro:before,.fa-eur:before{content:"\f153"}.fa-gbp:before{content:"\f154"}.fa-dollar:before,.fa-usd:before{content:"\f155"}.fa-rupee:before,.fa-inr:before{content:"\f156"}.fa-cny:before,.fa-rmb:before,.fa-yen:before,.fa-jpy:before{content:"\f157"}.fa-ruble:before,.fa-rouble:before,.fa-rub:before{content:"\f158"}.fa-won:before,.fa-krw:before{content:"\f159"}.fa-bitcoin:before,.fa-btc:before{content:"\f15a"}.fa-file:before{content:"\f15b"}.fa-file-text:before{content:"\f15c"}.fa-sort-alpha-asc:before{content:"\f15d"}.fa-sort-alpha-desc:before{content:"\f15e"}.fa-sort-amount-asc:before{content:"\f160"}.fa-sort-amount-desc:before{content:"\f161"}.fa-sort-numeric-asc:before{content:"\f162"}.fa-sort-numeric-desc:before{content:"\f163"}.fa-thumbs-up:before{content:"\f164"}.fa-thumbs-down:before{content:"\f165"}.fa-youtube-square:before{content:"\f166"}.fa-youtube:before{content:"\f167"}.fa-xing:before{content:"\f168"}.fa-xing-square:before{content:"\f169"}.fa-youtube-play:before{content:"\f16a"}.fa-dropbox:before{content:"\f16b"}.fa-stack-overflow:before{content:"\f16c"}.fa-instagram:before{content:"\f16d"}.fa-flickr:before{content:"\f16e"}.fa-adn:before{content:"\f170"}.fa-bitbucket:before{content:"\f171"}.fa-bitbucket-square:before{content:"\f172"}.fa-tumblr:before{content:"\f173"}.fa-tumblr-square:before{content:"\f174"}.fa-long-arrow-down:before{content:"\f175"}.fa-long-arrow-up:before{content:"\f176"}.fa-long-arrow-left:before{content:"\f177"}.fa-long-arrow-right:before{content:"\f178"}.fa-apple:before{content:"\f179"}.fa-windows:before{content:"\f17a"}.fa-android:before{content:"\f17b"}.fa-linux:before{content:"\f17c"}.fa-dribbble:before{content:"\f17d"}.fa-skype:before{content:"\f17e"}.fa-foursquare:before{content:"\f180"}.fa-trello:before{content:"\f181"}.fa-female:before{content:"\f182"}.fa-male:before{content:"\f183"}.fa-gittip:before,.fa-gratipay:before{content:"\f184"}.fa-sun-o:before{content:"\f185"}.fa-moon-o:before{content:"\f186"}.fa-archive:before{content:"\f187"}.fa-bug:before{content:"\f188"}.fa-vk:before{content:"\f189"}.fa-weibo:before{content:"\f18a"}.fa-renren:before{content:"\f18b"}.fa-pagelines:before{content:"\f18c"}.fa-stack-exchange:before{content:"\f18d"}.fa-arrow-circle-o-right:before{content:"\f18e"}.fa-arrow-circle-o-left:before{content:"\f190"}.fa-toggle-left:before,.fa-caret-square-o-left:before{content:"\f191"}.fa-dot-circle-o:before{content:"\f192"}.fa-wheelchair:before{content:"\f193"}.fa-vimeo-square:before{content:"\f194"}.fa-turkish-lira:before,.fa-try:before{content:"\f195"}.fa-plus-square-o:before{content:"\f196"}.fa-space-shuttle:before{content:"\f197"}.fa-slack:before{content:"\f198"}.fa-envelope-square:before{content:"\f199"}.fa-wordpress:before{content:"\f19a"}.fa-openid:before{content:"\f19b"}.fa-institution:before,.fa-bank:before,.fa-university:before{content:"\f19c"}.fa-mortar-board:before,.fa-graduation-cap:before{content:"\f19d"}.fa-yahoo:before{content:"\f19e"}.fa-google:before{content:"\f1a0"}.fa-reddit:before{content:"\f1a1"}.fa-reddit-square:before{content:"\f1a2"}.fa-stumbleupon-circle:before{content:"\f1a3"}.fa-stumbleupon:before{content:"\f1a4"}.fa-delicious:before{content:"\f1a5"}.fa-digg:before{content:"\f1a6"}.fa-pied-piper-pp:before{content:"\f1a7"}.fa-pied-piper-alt:before{content:"\f1a8"}.fa-drupal:before{content:"\f1a9"}.fa-joomla:before{content:"\f1aa"}.fa-language:before{content:"\f1ab"}.fa-fax:before{content:"\f1ac"}.fa-building:before{content:"\f1ad"}.fa-child:before{content:"\f1ae"}.fa-paw:before{content:"\f1b0"}.fa-spoon:before{content:"\f1b1"}.fa-cube:before{content:"\f1b2"}.fa-cubes:before{content:"\f1b3"}.fa-behance:before{content:"\f1b4"}.fa-behance-square:before{content:"\f1b5"}.fa-steam:before{content:"\f1b6"}.fa-steam-square:before{content:"\f1b7"}.fa-recycle:before{content:"\f1b8"}.fa-automobile:before,.fa-car:before{content:"\f1b9"}.fa-cab:before,.fa-taxi:before{content:"\f1ba"}.fa-tree:before{content:"\f1bb"}.fa-spotify:before{content:"\f1bc"}.fa-deviantart:before{content:"\f1bd"}.fa-soundcloud:before{content:"\f1be"}.fa-database:before{content:"\f1c0"}.fa-file-pdf-o:before{content:"\f1c1"}.fa-file-word-o:before{content:"\f1c2"}.fa-file-excel-o:before{content:"\f1c3"}.fa-file-powerpoint-o:before{content:"\f1c4"}.fa-file-photo-o:before,.fa-file-picture-o:before,.fa-file-image-o:before{content:"\f1c5"}.fa-file-zip-o:before,.fa-file-archive-o:before{content:"\f1c6"}.fa-file-sound-o:before,.fa-file-audio-o:before{content:"\f1c7"}.fa-file-movie-o:before,.fa-file-video-o:before{content:"\f1c8"}.fa-file-code-o:before{content:"\f1c9"}.fa-vine:before{content:"\f1ca"}.fa-codepen:before{content:"\f1cb"}.fa-jsfiddle:before{content:"\f1cc"}.fa-life-bouy:before,.fa-life-buoy:before,.fa-life-saver:before,.fa-support:before,.fa-life-ring:before{content:"\f1cd"}.fa-circle-o-notch:before{content:"\f1ce"}.fa-ra:before,.fa-resistance:before,.fa-rebel:before{content:"\f1d0"}.fa-ge:before,.fa-empire:before{content:"\f1d1"}.fa-git-square:before{content:"\f1d2"}.fa-git:before{content:"\f1d3"}.fa-y-combinator-square:before,.fa-yc-square:before,.fa-hacker-news:before{content:"\f1d4"}.fa-tencent-weibo:before{content:"\f1d5"}.fa-qq:before{content:"\f1d6"}.fa-wechat:before,.fa-weixin:before{content:"\f1d7"}.fa-send:before,.fa-paper-plane:before{content:"\f1d8"}.fa-send-o:before,.fa-paper-plane-o:before{content:"\f1d9"}.fa-history:before{content:"\f1da"}.fa-circle-thin:before{content:"\f1db"}.fa-header:before{content:"\f1dc"}.fa-paragraph:before{content:"\f1dd"}.fa-sliders:before{content:"\f1de"}.fa-share-alt:before{content:"\f1e0"}.fa-share-alt-square:before{content:"\f1e1"}.fa-bomb:before{content:"\f1e2"}.fa-soccer-ball-o:before,.fa-futbol-o:before{content:"\f1e3"}.fa-tty:before{content:"\f1e4"}.fa-binoculars:before{content:"\f1e5"}.fa-plug:before{content:"\f1e6"}.fa-slideshare:before{content:"\f1e7"}.fa-twitch:before{content:"\f1e8"}.fa-yelp:before{content:"\f1e9"}.fa-newspaper-o:before{content:"\f1ea"}.fa-wifi:before{content:"\f1eb"}.fa-calculator:before{content:"\f1ec"}.fa-paypal:before{content:"\f1ed"}.fa-google-wallet:before{content:"\f1ee"}.fa-cc-visa:before{content:"\f1f0"}.fa-cc-mastercard:before{content:"\f1f1"}.fa-cc-discover:before{content:"\f1f2"}.fa-cc-amex:before{content:"\f1f3"}.fa-cc-paypal:before{content:"\f1f4"}.fa-cc-stripe:before{content:"\f1f5"}.fa-bell-slash:before{content:"\f1f6"}.fa-bell-slash-o:before{content:"\f1f7"}.fa-trash:before{content:"\f1f8"}.fa-copyright:before{content:"\f1f9"}.fa-at:before{content:"\f1fa"}.fa-eyedropper:before{content:"\f1fb"}.fa-paint-brush:before{content:"\f1fc"}.fa-birthday-cake:before{content:"\f1fd"}.fa-area-chart:before{content:"\f1fe"}.fa-pie-chart:before{content:"\f200"}.fa-line-chart:before{content:"\f201"}.fa-lastfm:before{content:"\f202"}.fa-lastfm-square:before{content:"\f203"}.fa-toggle-off:before{content:"\f204"}.fa-toggle-on:before{content:"\f205"}.fa-bicycle:before{content:"\f206"}.fa-bus:before{content:"\f207"}.fa-ioxhost:before{content:"\f208"}.fa-angellist:before{content:"\f209"}.fa-cc:before{content:"\f20a"}.fa-shekel:before,.fa-sheqel:before,.fa-ils:before{content:"\f20b"}.fa-meanpath:before{content:"\f20c"}.fa-buysellads:before{content:"\f20d"}.fa-connectdevelop:before{content:"\f20e"}.fa-dashcube:before{content:"\f210"}.fa-forumbee:before{content:"\f211"}.fa-leanpub:before{content:"\f212"}.fa-sellsy:before{content:"\f213"}.fa-shirtsinbulk:before{content:"\f214"}.fa-simplybuilt:before{content:"\f215"}.fa-skyatlas:before{content:"\f216"}.fa-cart-plus:before{content:"\f217"}.fa-cart-arrow-down:before{content:"\f218"}.fa-diamond:before{content:"\f219"}.fa-ship:before{content:"\f21a"}.fa-user-secret:before{content:"\f21b"}.fa-motorcycle:before{content:"\f21c"}.fa-street-view:before{content:"\f21d"}.fa-heartbeat:before{content:"\f21e"}.fa-venus:before{content:"\f221"}.fa-mars:before{content:"\f222"}.fa-mercury:before{content:"\f223"}.fa-intersex:before,.fa-transgender:before{content:"\f224"}.fa-transgender-alt:before{content:"\f225"}.fa-venus-double:before{content:"\f226"}.fa-mars-double:before{content:"\f227"}.fa-venus-mars:before{content:"\f228"}.fa-mars-stroke:before{content:"\f229"}.fa-mars-stroke-v:before{content:"\f22a"}.fa-mars-stroke-h:before{content:"\f22b"}.fa-neuter:before{content:"\f22c"}.fa-genderless:before{content:"\f22d"}.fa-facebook-official:before{content:"\f230"}.fa-pinterest-p:before{content:"\f231"}.fa-whatsapp:before{content:"\f232"}.fa-server:before{content:"\f233"}.fa-user-plus:before{content:"\f234"}.fa-user-times:before{content:"\f235"}.fa-hotel:before,.fa-bed:before{content:"\f236"}.fa-viacoin:before{content:"\f237"}.fa-train:before{content:"\f238"}.fa-subway:before{content:"\f239"}.fa-medium:before{content:"\f23a"}.fa-yc:before,.fa-y-combinator:before{content:"\f23b"}.fa-optin-monster:before{content:"\f23c"}.fa-opencart:before{content:"\f23d"}.fa-expeditedssl:before{content:"\f23e"}.fa-battery-4:before,.fa-battery:before,.fa-battery-full:before{content:"\f240"}.fa-battery-3:before,.fa-battery-three-quarters:before{content:"\f241"}.fa-battery-2:before,.fa-battery-half:before{content:"\f242"}.fa-battery-1:before,.fa-battery-quarter:before{content:"\f243"}.fa-battery-0:before,.fa-battery-empty:before{content:"\f244"}.fa-mouse-pointer:before{content:"\f245"}.fa-i-cursor:before{content:"\f246"}.fa-object-group:before{content:"\f247"}.fa-object-ungroup:before{content:"\f248"}.fa-sticky-note:before{content:"\f249"}.fa-sticky-note-o:before{content:"\f24a"}.fa-cc-jcb:before{content:"\f24b"}.fa-cc-diners-club:before{content:"\f24c"}.fa-clone:before{content:"\f24d"}.fa-balance-scale:before{content:"\f24e"}.fa-hourglass-o:before{content:"\f250"}.fa-hourglass-1:before,.fa-hourglass-start:before{content:"\f251"}.fa-hourglass-2:before,.fa-hourglass-half:before{content:"\f252"}.fa-hourglass-3:before,.fa-hourglass-end:before{content:"\f253"}.fa-hourglass:before{content:"\f254"}.fa-hand-grab-o:before,.fa-hand-rock-o:before{content:"\f255"}.fa-hand-stop-o:before,.fa-hand-paper-o:before{content:"\f256"}.fa-hand-scissors-o:before{content:"\f257"}.fa-hand-lizard-o:before{content:"\f258"}.fa-hand-spock-o:before{content:"\f259"}.fa-hand-pointer-o:before{content:"\f25a"}.fa-hand-peace-o:before{content:"\f25b"}.fa-trademark:before{content:"\f25c"}.fa-registered:before{content:"\f25d"}.fa-creative-commons:before{content:"\f25e"}.fa-gg:before{content:"\f260"}.fa-gg-circle:before{content:"\f261"}.fa-tripadvisor:before{content:"\f262"}.fa-odnoklassniki:before{content:"\f263"}.fa-odnoklassniki-square:before{content:"\f264"}.fa-get-pocket:before{content:"\f265"}.fa-wikipedia-w:before{content:"\f266"}.fa-safari:before{content:"\f267"}.fa-chrome:before{content:"\f268"}.fa-firefox:before{content:"\f269"}.fa-opera:before{content:"\f26a"}.fa-internet-explorer:before{content:"\f26b"}.fa-tv:before,.fa-television:before{content:"\f26c"}.fa-contao:before{content:"\f26d"}.fa-500px:before{content:"\f26e"}.fa-amazon:before{content:"\f270"}.fa-calendar-plus-o:before{content:"\f271"}.fa-calendar-minus-o:before{content:"\f272"}.fa-calendar-times-o:before{content:"\f273"}.fa-calendar-check-o:before{content:"\f274"}.fa-industry:before{content:"\f275"}.fa-map-pin:before{content:"\f276"}.fa-map-signs:before{content:"\f277"}.fa-map-o:before{content:"\f278"}.fa-map:before{content:"\f279"}.fa-commenting:before{content:"\f27a"}.fa-commenting-o:before{content:"\f27b"}.fa-houzz:before{content:"\f27c"}.fa-vimeo:before{content:"\f27d"}.fa-black-tie:before{content:"\f27e"}.fa-fonticons:before{content:"\f280"}.fa-reddit-alien:before{content:"\f281"}.fa-edge:before{content:"\f282"}.fa-credit-card-alt:before{content:"\f283"}.fa-codiepie:before{content:"\f284"}.fa-modx:before{content:"\f285"}.fa-fort-awesome:before{content:"\f286"}.fa-usb:before{content:"\f287"}.fa-product-hunt:before{content:"\f288"}.fa-mixcloud:before{content:"\f289"}.fa-scribd:before{content:"\f28a"}.fa-pause-circle:before{content:"\f28b"}.fa-pause-circle-o:before{content:"\f28c"}.fa-stop-circle:before{content:"\f28d"}.fa-stop-circle-o:before{content:"\f28e"}.fa-shopping-bag:before{content:"\f290"}.fa-shopping-basket:before{content:"\f291"}.fa-hashtag:before{content:"\f292"}.fa-bluetooth:before{content:"\f293"}.fa-bluetooth-b:before{content:"\f294"}.fa-percent:before{content:"\f295"}.fa-gitlab:before{content:"\f296"}.fa-wpbeginner:before{content:"\f297"}.fa-wpforms:before{content:"\f298"}.fa-envira:before{content:"\f299"}.fa-universal-access:before{content:"\f29a"}.fa-wheelchair-alt:before{content:"\f29b"}.fa-question-circle-o:before{content:"\f29c"}.fa-blind:before{content:"\f29d"}.fa-audio-description:before{content:"\f29e"}.fa-volume-control-phone:before{content:"\f2a0"}.fa-braille:before{content:"\f2a1"}.fa-assistive-listening-systems:before{content:"\f2a2"}.fa-asl-interpreting:before,.fa-american-sign-language-interpreting:before{content:"\f2a3"}.fa-deafness:before,.fa-hard-of-hearing:before,.fa-deaf:before{content:"\f2a4"}.fa-glide:before{content:"\f2a5"}.fa-glide-g:before{content:"\f2a6"}.fa-signing:before,.fa-sign-language:before{content:"\f2a7"}.fa-low-vision:before{content:"\f2a8"}.fa-viadeo:before{content:"\f2a9"}.fa-viadeo-square:before{content:"\f2aa"}.fa-snapchat:before{content:"\f2ab"}.fa-snapchat-ghost:before{content:"\f2ac"}.fa-snapchat-square:before{content:"\f2ad"}.fa-pied-piper:before{content:"\f2ae"}.fa-first-order:before{content:"\f2b0"}.fa-yoast:before{content:"\f2b1"}.fa-themeisle:before{content:"\f2b2"}.fa-google-plus-circle:before,.fa-google-plus-official:before{content:"\f2b3"}.fa-fa:before,.fa-font-awesome:before{content:"\f2b4"}.fa-handshake-o:before{content:"\f2b5"}.fa-envelope-open:before{content:"\f2b6"}.fa-envelope-open-o:before{content:"\f2b7"}.fa-linode:before{content:"\f2b8"}.fa-address-book:before{content:"\f2b9"}.fa-address-book-o:before{content:"\f2ba"}.fa-vcard:before,.fa-address-card:before{content:"\f2bb"}.fa-vcard-o:before,.fa-address-card-o:before{content:"\f2bc"}.fa-user-circle:before{content:"\f2bd"}.fa-user-circle-o:before{content:"\f2be"}.fa-user-o:before{content:"\f2c0"}.fa-id-badge:before{content:"\f2c1"}.fa-drivers-license:before,.fa-id-card:before{content:"\f2c2"}.fa-drivers-license-o:before,.fa-id-card-o:before{content:"\f2c3"}.fa-quora:before{content:"\f2c4"}.fa-free-code-camp:before{content:"\f2c5"}.fa-telegram:before{content:"\f2c6"}.fa-thermometer-4:before,.fa-thermometer:before,.fa-thermometer-full:before{content:"\f2c7"}.fa-thermometer-3:before,.fa-thermometer-three-quarters:before{content:"\f2c8"}.fa-thermometer-2:before,.fa-thermometer-half:before{content:"\f2c9"}.fa-thermometer-1:before,.fa-thermometer-quarter:before{content:"\f2ca"}.fa-thermometer-0:before,.fa-thermometer-empty:before{content:"\f2cb"}.fa-shower:before{content:"\f2cc"}.fa-bathtub:before,.fa-s15:before,.fa-bath:before{content:"\f2cd"}.fa-podcast:before{content:"\f2ce"}.fa-window-maximize:before{content:"\f2d0"}.fa-window-minimize:before{content:"\f2d1"}.fa-window-restore:before{content:"\f2d2"}.fa-times-rectangle:before,.fa-window-close:before{content:"\f2d3"}.fa-times-rectangle-o:before,.fa-window-close-o:before{content:"\f2d4"}.fa-bandcamp:before{content:"\f2d5"}.fa-grav:before{content:"\f2d6"}.fa-etsy:before{content:"\f2d7"}.fa-imdb:before{content:"\f2d8"}.fa-ravelry:before{content:"\f2d9"}.fa-eercast:before{content:"\f2da"}.fa-microchip:before{content:"\f2db"}.fa-snowflake-o:before{content:"\f2dc"}.fa-superpowers:before{content:"\f2dd"}.fa-wpexplorer:before{content:"\f2de"}.fa-meetup:before{content:"\f2e0"}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}
+</style>
+<style type="text/css">
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+
+.jspContainer
+{
+	overflow: hidden;
+	position: relative;
+}
+
+.jspPane
+{
+	position: absolute;
+}
+
+.jspVerticalBar
+{
+	position: absolute;
+	top: 0;
+		right: 0;
+		width: 10px;
+	height: 100%;
+	background: red;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+    /*Chrome CSS here*/
+
+   .jspPane
+	{
+		left:0 !important;
+	}
+
+}
+.jspCap
+{
+	display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+	float: left;
+}
+
+.jspTrack
+{
+	background: #eee;
+	position: relative;
+}
+
+.jspDrag
+{
+	background: #ccc;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+{
+	float: left;
+	height: 100%;
+}
+
+.jspArrow
+{
+	background: #50506d;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+}
+
+.jspArrow.jspDisabled
+{
+	cursor: default;
+	background: #80808d;
+}
+
+.jspVerticalBar .jspArrow
+{
+	height: 16px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+	width: 10px;
+	float: left;
+	height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+	outline: none;
+}
+
+.jspCorner
+{
+	background: #eeeef4;
+	float: left;
+	height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+	margin: 0 -3px 0 0;
+}
+</style>
+<script type="text/javascript">
+/*! Copyright (c) 2013 Brandon Aaron (http://brandon.aaron.sh)
+ * Licensed under the MIT License (LICENSE.txt).
+ *
+ * jquery.mousewheel.js
+ * Version: 3.1.9
+ *
+ * Requires: jQuery 1.2.2+
+ */
+
+(function (factory) {
+    if ( typeof define === 'function' && define.amd ) {
+        // AMD. Register as an anonymous module.
+        define(['jquery'], factory);
+    } else if (typeof exports === 'object') {
+        // Node/CommonJS style for Browserify
+        module.exports = factory;
+    } else {
+        // Browser globals
+        factory(jQuery);
+    }
+}(function ($) {
+
+    var toFix  = ['wheel', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll'],
+        toBind = ( 'onwheel' in document || document.documentMode >= 9 ) ?
+                    ['wheel'] : ['mousewheel', 'DomMouseScroll', 'MozMousePixelScroll'],
+        slice  = Array.prototype.slice,
+        nullLowestDeltaTimeout, lowestDelta;
+
+    if ( $.event.fixHooks ) {
+        for ( var i = toFix.length; i; ) {
+            $.event.fixHooks[ toFix[--i] ] = $.event.mouseHooks;
+        }
+    }
+
+    var special = $.event.special.mousewheel = {
+        version: '3.1.9',
+
+        setup: function() {
+            if ( this.addEventListener ) {
+                for ( var i = toBind.length; i; ) {
+                    this.addEventListener( toBind[--i], handler, false );
+                }
+            } else {
+                this.onmousewheel = handler;
+            }
+            // Store the line height and page height for this particular element
+            $.data(this, 'mousewheel-line-height', special.getLineHeight(this));
+            $.data(this, 'mousewheel-page-height', special.getPageHeight(this));
+        },
+
+        teardown: function() {
+            if ( this.removeEventListener ) {
+                for ( var i = toBind.length; i; ) {
+                    this.removeEventListener( toBind[--i], handler, false );
+                }
+            } else {
+                this.onmousewheel = null;
+            }
+        },
+
+        getLineHeight: function(elem) {
+            return parseInt($(elem)['offsetParent' in $.fn ? 'offsetParent' : 'parent']().css('fontSize'), 10);
+        },
+
+        getPageHeight: function(elem) {
+            return $(elem).height();
+        },
+
+        settings: {
+            adjustOldDeltas: true
+        }
+    };
+
+    $.fn.extend({
+        mousewheel: function(fn) {
+            return fn ? this.bind('mousewheel', fn) : this.trigger('mousewheel');
+        },
+
+        unmousewheel: function(fn) {
+            return this.unbind('mousewheel', fn);
+        }
+    });
+
+
+    function handler(event) {
+        var orgEvent   = event || window.event,
+            args       = slice.call(arguments, 1),
+            delta      = 0,
+            deltaX     = 0,
+            deltaY     = 0,
+            absDelta   = 0;
+        event = $.event.fix(orgEvent);
+        event.type = 'mousewheel';
+
+        // Old school scrollwheel delta
+        if ( 'detail'      in orgEvent ) { deltaY = orgEvent.detail * -1;      }
+        if ( 'wheelDelta'  in orgEvent ) { deltaY = orgEvent.wheelDelta;       }
+        if ( 'wheelDeltaY' in orgEvent ) { deltaY = orgEvent.wheelDeltaY;      }
+        if ( 'wheelDeltaX' in orgEvent ) { deltaX = orgEvent.wheelDeltaX * -1; }
+
+        // Firefox < 17 horizontal scrolling related to DOMMouseScroll event
+        if ( 'axis' in orgEvent && orgEvent.axis === orgEvent.HORIZONTAL_AXIS ) {
+            deltaX = deltaY * -1;
+            deltaY = 0;
+        }
+
+        // Set delta to be deltaY or deltaX if deltaY is 0 for backwards compatabilitiy
+        delta = deltaY === 0 ? deltaX : deltaY;
+
+        // New school wheel delta (wheel event)
+        if ( 'deltaY' in orgEvent ) {
+            deltaY = orgEvent.deltaY * -1;
+            delta  = deltaY;
+        }
+        if ( 'deltaX' in orgEvent ) {
+            deltaX = orgEvent.deltaX;
+            if ( deltaY === 0 ) { delta  = deltaX * -1; }
+        }
+
+        // No change actually happened, no reason to go any further
+        if ( deltaY === 0 && deltaX === 0 ) { return; }
+
+        // Need to convert lines and pages to pixels if we aren't already in pixels
+        // There are three delta modes:
+        //   * deltaMode 0 is by pixels, nothing to do
+        //   * deltaMode 1 is by lines
+        //   * deltaMode 2 is by pages
+        if ( orgEvent.deltaMode === 1 ) {
+            var lineHeight = $.data(this, 'mousewheel-line-height');
+            delta  *= lineHeight;
+            deltaY *= lineHeight;
+            deltaX *= lineHeight;
+        } else if ( orgEvent.deltaMode === 2 ) {
+            var pageHeight = $.data(this, 'mousewheel-page-height');
+            delta  *= pageHeight;
+            deltaY *= pageHeight;
+            deltaX *= pageHeight;
+        }
+
+        // Store lowest absolute delta to normalize the delta values
+        absDelta = Math.max( Math.abs(deltaY), Math.abs(deltaX) );
+
+        if ( !lowestDelta || absDelta < lowestDelta ) {
+            lowestDelta = absDelta;
+
+            // Adjust older deltas if necessary
+            if ( shouldAdjustOldDeltas(orgEvent, absDelta) ) {
+                lowestDelta /= 40;
+            }
+        }
+
+        // Adjust older deltas if necessary
+        if ( shouldAdjustOldDeltas(orgEvent, absDelta) ) {
+            // Divide all the things by 40!
+            delta  /= 40;
+            deltaX /= 40;
+            deltaY /= 40;
+        }
+
+        // Get a whole, normalized value for the deltas
+        delta  = Math[ delta  >= 1 ? 'floor' : 'ceil' ](delta  / lowestDelta);
+        deltaX = Math[ deltaX >= 1 ? 'floor' : 'ceil' ](deltaX / lowestDelta);
+        deltaY = Math[ deltaY >= 1 ? 'floor' : 'ceil' ](deltaY / lowestDelta);
+
+        // Add information to the event object
+        event.deltaX = deltaX;
+        event.deltaY = deltaY;
+        event.deltaFactor = lowestDelta;
+        // Go ahead and set deltaMode to 0 since we converted to pixels
+        // Although this is a little odd since we overwrite the deltaX/Y
+        // properties with normalized deltas.
+        event.deltaMode = 0;
+
+        // Add event and delta to the front of the arguments
+        args.unshift(event, delta, deltaX, deltaY);
+
+        // Clearout lowestDelta after sometime to better
+        // handle multiple device types that give different
+        // a different lowestDelta
+        // Ex: trackpad = 3 and mouse wheel = 120
+        if (nullLowestDeltaTimeout) { clearTimeout(nullLowestDeltaTimeout); }
+        nullLowestDeltaTimeout = setTimeout(nullLowestDelta, 200);
+
+        return ($.event.dispatch || $.event.handle).apply(this, args);
+    }
+
+    function nullLowestDelta() {
+        lowestDelta = null;
+    }
+
+    function shouldAdjustOldDeltas(orgEvent, absDelta) {
+        // If this is an older event and the delta is divisable by 120,
+        // then we are assuming that the browser is treating this as an
+        // older mouse wheel event and that we should divide the deltas
+        // by 40 to try and get a more usable deltaFactor.
+        // Side note, this actually impacts the reported scroll distance
+        // in older browsers and can cause scrolling to be slower than native.
+        // Turn this off by setting $.event.special.mousewheel.settings.adjustOldDeltas to false.
+        return special.settings.adjustOldDeltas && orgEvent.type === 'mousewheel' && absDelta % 120 === 0;
+    }
+
+}));
+</script>
+<script type="text/javascript">
+/*!
+ * jScrollPane - v2.0.19 - 2013-11-16
+ * http://jscrollpane.kelvinluck.com/
+ *
+ * Copyright (c) 2013 Kelvin Luck
+ * Dual licensed under the MIT or GPL licenses.
+ */
+!function(a,b,c){a.fn.jScrollPane=function(d){function e(d,e){function f(b){var e,h,j,l,m,n,q=!1,r=!1;if(P=b,Q===c)m=d.scrollTop(),n=d.scrollLeft(),d.css({overflow:"hidden",padding:0}),R=d.innerWidth()+tb,S=d.innerHeight(),d.width(R),Q=a('<div class="jspPane" ></div>').css("padding",sb).append(d.children()),T=a('<div class="jspContainer" ></div>').css({width:R+"px",height:S+"px"}).append(Q).appendTo(d);else{if(d.css("width",""),q=P.stickToBottom&&C(),r=P.stickToRight&&D(),l=d.innerWidth()+tb!=R||d.outerHeight()!=S,l&&(R=d.innerWidth()+tb,S=d.innerHeight(),T.css({width:R+"px",height:S+"px"})),!l&&ub==U&&Q.outerHeight()==V)return d.width(R),void 0;ub=U,Q.css("width",""),d.width(R),T.find(">.jspVerticalBar,>.jspHorizontalBar").remove().end()}Q.css("overflow","auto"),U=b.contentWidth?b.contentWidth:Q[0].scrollWidth,V=Q[0].scrollHeight,Q.css("overflow",""),W=U/R,X=V/S,Y=X>1,Z=W>1,Z||Y?(d.addClass("jspScrollable"),e=P.maintainPosition&&(ab||db),e&&(h=A(),j=B()),g(),i(),k(),e&&(y(r?U-R:h,!1),x(q?V-S:j,!1)),H(),E(),N(),P.enableKeyboardNavigation&&J(),P.clickOnTrack&&o(),L(),P.hijackInternalLinks&&M()):(d.removeClass("jspScrollable"),Q.css({top:0,left:0,width:T.width()-tb}),F(),I(),K(),p()),P.autoReinitialise&&!rb?rb=setInterval(function(){f(P)},P.autoReinitialiseDelay):!P.autoReinitialise&&rb&&clearInterval(rb),m&&d.scrollTop(0)&&x(m,!1),n&&d.scrollLeft(0)&&y(n,!1),d.trigger("jsp-initialised",[Z||Y])}function g(){Y&&(T.append(a('<div class="jspVerticalBar" ></div>').append(a('<div class="jspCap jspCapTop" ></div>'),a('<div class="jspTrack" ></div>').append(a('<div class="jspDrag" ></div>').append(a('<div class="jspDragTop" ></div>'),a('<div class="jspDragBottom" ></div>'))),a('<div class="jspCap jspCapBottom" ></div>'))),eb=T.find(">.jspVerticalBar"),fb=eb.find(">.jspTrack"),$=fb.find(">.jspDrag"),P.showArrows&&(jb=a('<a class="jspArrow jspArrowUp" ></a>').bind("mousedown.jsp",m(0,-1)).bind("click.jsp",G),kb=a('<a class="jspArrow jspArrowDown" ></a>').bind("mousedown.jsp",m(0,1)).bind("click.jsp",G),P.arrowScrollOnHover&&(jb.bind("mouseover.jsp",m(0,-1,jb)),kb.bind("mouseover.jsp",m(0,1,kb))),l(fb,P.verticalArrowPositions,jb,kb)),hb=S,T.find(">.jspVerticalBar>.jspCap:visible,>.jspVerticalBar>.jspArrow").each(function(){hb-=a(this).outerHeight()}),$.hover(function(){$.addClass("jspHover")},function(){$.removeClass("jspHover")}).bind("mousedown.jsp",function(b){a("html").bind("dragstart.jsp selectstart.jsp",G),$.addClass("jspActive");var c=b.pageY-$.position().top;return a("html").bind("mousemove.jsp",function(a){r(a.pageY-c,!1)}).bind("mouseup.jsp mouseleave.jsp",q),!1}),h())}function h(){fb.height(hb+"px"),ab=0,gb=P.verticalGutter+fb.outerWidth(),Q.width(R-gb-tb);try{0===eb.position().left&&Q.css("margin-left",gb+"px")}catch(a){}}function i(){Z&&(T.append(a('<div class="jspHorizontalBar" ></div>').append(a('<div class="jspCap jspCapLeft" ></div>'),a('<div class="jspTrack" ></div>').append(a('<div class="jspDrag" ></div>').append(a('<div class="jspDragLeft" ></div>'),a('<div class="jspDragRight" ></div>'))),a('<div class="jspCap jspCapRight" ></div>'))),lb=T.find(">.jspHorizontalBar"),mb=lb.find(">.jspTrack"),bb=mb.find(">.jspDrag"),P.showArrows&&(pb=a('<a class="jspArrow jspArrowLeft" ></a>').bind("mousedown.jsp",m(-1,0)).bind("click.jsp",G),qb=a('<a class="jspArrow jspArrowRight" ></a>').bind("mousedown.jsp",m(1,0)).bind("click.jsp",G),P.arrowScrollOnHover&&(pb.bind("mouseover.jsp",m(-1,0,pb)),qb.bind("mouseover.jsp",m(1,0,qb))),l(mb,P.horizontalArrowPositions,pb,qb)),bb.hover(function(){bb.addClass("jspHover")},function(){bb.removeClass("jspHover")}).bind("mousedown.jsp",function(b){a("html").bind("dragstart.jsp selectstart.jsp",G),bb.addClass("jspActive");var c=b.pageX-bb.position().left;return a("html").bind("mousemove.jsp",function(a){t(a.pageX-c,!1)}).bind("mouseup.jsp mouseleave.jsp",q),!1}),nb=T.innerWidth(),j())}function j(){T.find(">.jspHorizontalBar>.jspCap:visible,>.jspHorizontalBar>.jspArrow").each(function(){nb-=a(this).outerWidth()}),mb.width(nb+"px"),db=0}function k(){if(Z&&Y){var b=mb.outerHeight(),c=fb.outerWidth();hb-=b,a(lb).find(">.jspCap:visible,>.jspArrow").each(function(){nb+=a(this).outerWidth()}),nb-=c,S-=c,R-=b,mb.parent().append(a('<div class="jspCorner" ></div>').css("width",b+"px")),h(),j()}Z&&Q.width(T.outerWidth()-tb+"px"),V=Q.outerHeight(),X=V/S,Z&&(ob=Math.ceil(1/W*nb),ob>P.horizontalDragMaxWidth?ob=P.horizontalDragMaxWidth:ob<P.horizontalDragMinWidth&&(ob=P.horizontalDragMinWidth),bb.width(ob+"px"),cb=nb-ob,u(db)),Y&&(ib=Math.ceil(1/X*hb),ib>P.verticalDragMaxHeight?ib=P.verticalDragMaxHeight:ib<P.verticalDragMinHeight&&(ib=P.verticalDragMinHeight),$.height(ib+"px"),_=hb-ib,s(ab))}function l(a,b,c,d){var e,f="before",g="after";"os"==b&&(b=/Mac/.test(navigator.platform)?"after":"split"),b==f?g=b:b==g&&(f=b,e=c,c=d,d=e),a[f](c)[g](d)}function m(a,b,c){return function(){return n(a,b,this,c),this.blur(),!1}}function n(b,c,d,e){d=a(d).addClass("jspActive");var f,g,h=!0,i=function(){0!==b&&vb.scrollByX(b*P.arrowButtonSpeed),0!==c&&vb.scrollByY(c*P.arrowButtonSpeed),g=setTimeout(i,h?P.initialDelay:P.arrowRepeatFreq),h=!1};i(),f=e?"mouseout.jsp":"mouseup.jsp",e=e||a("html"),e.bind(f,function(){d.removeClass("jspActive"),g&&clearTimeout(g),g=null,e.unbind(f)})}function o(){p(),Y&&fb.bind("mousedown.jsp",function(b){if(b.originalTarget===c||b.originalTarget==b.currentTarget){var d,e=a(this),f=e.offset(),g=b.pageY-f.top-ab,h=!0,i=function(){var a=e.offset(),c=b.pageY-a.top-ib/2,f=S*P.scrollPagePercent,k=_*f/(V-S);if(0>g)ab-k>c?vb.scrollByY(-f):r(c);else{if(!(g>0))return j(),void 0;c>ab+k?vb.scrollByY(f):r(c)}d=setTimeout(i,h?P.initialDelay:P.trackClickRepeatFreq),h=!1},j=function(){d&&clearTimeout(d),d=null,a(document).unbind("mouseup.jsp",j)};return i(),a(document).bind("mouseup.jsp",j),!1}}),Z&&mb.bind("mousedown.jsp",function(b){if(b.originalTarget===c||b.originalTarget==b.currentTarget){var d,e=a(this),f=e.offset(),g=b.pageX-f.left-db,h=!0,i=function(){var a=e.offset(),c=b.pageX-a.left-ob/2,f=R*P.scrollPagePercent,k=cb*f/(U-R);if(0>g)db-k>c?vb.scrollByX(-f):t(c);else{if(!(g>0))return j(),void 0;c>db+k?vb.scrollByX(f):t(c)}d=setTimeout(i,h?P.initialDelay:P.trackClickRepeatFreq),h=!1},j=function(){d&&clearTimeout(d),d=null,a(document).unbind("mouseup.jsp",j)};return i(),a(document).bind("mouseup.jsp",j),!1}})}function p(){mb&&mb.unbind("mousedown.jsp"),fb&&fb.unbind("mousedown.jsp")}function q(){a("html").unbind("dragstart.jsp selectstart.jsp mousemove.jsp mouseup.jsp mouseleave.jsp"),$&&$.removeClass("jspActive"),bb&&bb.removeClass("jspActive")}function r(a,b){Y&&(0>a?a=0:a>_&&(a=_),b===c&&(b=P.animateScroll),b?vb.animate($,"top",a,s):($.css("top",a),s(a)))}function s(a){a===c&&(a=$.position().top),T.scrollTop(0),ab=a;var b=0===ab,e=ab==_,f=a/_,g=-f*(V-S);(wb!=b||yb!=e)&&(wb=b,yb=e,d.trigger("jsp-arrow-change",[wb,yb,xb,zb])),v(b,e),Q.css("top",g),d.trigger("jsp-scroll-y",[-g,b,e]).trigger("scroll")}function t(a,b){Z&&(0>a?a=0:a>cb&&(a=cb),b===c&&(b=P.animateScroll),b?vb.animate(bb,"left",a,u):(bb.css("left",a),u(a)))}function u(a){a===c&&(a=bb.position().left),T.scrollTop(0),db=a;var b=0===db,e=db==cb,f=a/cb,g=-f*(U-R);(xb!=b||zb!=e)&&(xb=b,zb=e,d.trigger("jsp-arrow-change",[wb,yb,xb,zb])),w(b,e),Q.css("left",g),d.trigger("jsp-scroll-x",[-g,b,e]).trigger("scroll")}function v(a,b){P.showArrows&&(jb[a?"addClass":"removeClass"]("jspDisabled"),kb[b?"addClass":"removeClass"]("jspDisabled"))}function w(a,b){P.showArrows&&(pb[a?"addClass":"removeClass"]("jspDisabled"),qb[b?"addClass":"removeClass"]("jspDisabled"))}function x(a,b){var c=a/(V-S);r(c*_,b)}function y(a,b){var c=a/(U-R);t(c*cb,b)}function z(b,c,d){var e,f,g,h,i,j,k,l,m,n=0,o=0;try{e=a(b)}catch(p){return}for(f=e.outerHeight(),g=e.outerWidth(),T.scrollTop(0),T.scrollLeft(0);!e.is(".jspPane");)if(n+=e.position().top,o+=e.position().left,e=e.offsetParent(),/^body|html$/i.test(e[0].nodeName))return;h=B(),j=h+S,h>n||c?l=n-P.horizontalGutter:n+f>j&&(l=n-S+f+P.horizontalGutter),isNaN(l)||x(l,d),i=A(),k=i+R,i>o||c?m=o-P.horizontalGutter:o+g>k&&(m=o-R+g+P.horizontalGutter),isNaN(m)||y(m,d)}function A(){return-Q.position().left}function B(){return-Q.position().top}function C(){var a=V-S;return a>20&&a-B()<10}function D(){var a=U-R;return a>20&&a-A()<10}function E(){T.unbind(Bb).bind(Bb,function(a,b,c,d){var e=db,f=ab,g=a.deltaFactor||P.mouseWheelSpeed;return vb.scrollBy(c*g,-d*g,!1),e==db&&f==ab})}function F(){T.unbind(Bb)}function G(){return!1}function H(){Q.find(":input,a").unbind("focus.jsp").bind("focus.jsp",function(a){z(a.target,!1)})}function I(){Q.find(":input,a").unbind("focus.jsp")}function J(){function b(){var a=db,b=ab;switch(c){case 40:vb.scrollByY(P.keyboardSpeed,!1);break;case 38:vb.scrollByY(-P.keyboardSpeed,!1);break;case 34:case 32:vb.scrollByY(S*P.scrollPagePercent,!1);break;case 33:vb.scrollByY(-S*P.scrollPagePercent,!1);break;case 39:vb.scrollByX(P.keyboardSpeed,!1);break;case 37:vb.scrollByX(-P.keyboardSpeed,!1)}return e=a!=db||b!=ab}var c,e,f=[];Z&&f.push(lb[0]),Y&&f.push(eb[0]),Q.focus(function(){d.focus()}),d.attr("tabindex",0).unbind("keydown.jsp keypress.jsp").bind("keydown.jsp",function(d){if(d.target===this||f.length&&a(d.target).closest(f).length){var g=db,h=ab;switch(d.keyCode){case 40:case 38:case 34:case 32:case 33:case 39:case 37:c=d.keyCode,b();break;case 35:x(V-S),c=null;break;case 36:x(0),c=null}return e=d.keyCode==c&&g!=db||h!=ab,!e}}).bind("keypress.jsp",function(a){return a.keyCode==c&&b(),!e}),P.hideFocus?(d.css("outline","none"),"hideFocus"in T[0]&&d.attr("hideFocus",!0)):(d.css("outline",""),"hideFocus"in T[0]&&d.attr("hideFocus",!1))}function K(){d.attr("tabindex","-1").removeAttr("tabindex").unbind("keydown.jsp keypress.jsp")}function L(){if(location.hash&&location.hash.length>1){var b,c,d=escape(location.hash.substr(1));try{b=a("#"+d+', a[name="'+d+'"]')}catch(e){return}b.length&&Q.find(d)&&(0===T.scrollTop()?c=setInterval(function(){T.scrollTop()>0&&(z(b,!0),a(document).scrollTop(T.position().top),clearInterval(c))},50):(z(b,!0),a(document).scrollTop(T.position().top)))}}function M(){a(document.body).data("jspHijack")||(a(document.body).data("jspHijack",!0),a(document.body).delegate("a[href*=#]","click",function(c){var d,e,f,g,h,i,j=this.href.substr(0,this.href.indexOf("#")),k=location.href;if(-1!==location.href.indexOf("#")&&(k=location.href.substr(0,location.href.indexOf("#"))),j===k){d=escape(this.href.substr(this.href.indexOf("#")+1));try{e=a("#"+d+', a[name="'+d+'"]')}catch(l){return}e.length&&(f=e.closest(".jspScrollable"),g=f.data("jsp"),g.scrollToElement(e,!0),f[0].scrollIntoView&&(h=a(b).scrollTop(),i=e.offset().top,(h>i||i>h+a(b).height())&&f[0].scrollIntoView()),c.preventDefault())}}))}function N(){var a,b,c,d,e,f=!1;T.unbind("touchstart.jsp touchmove.jsp touchend.jsp click.jsp-touchclick").bind("touchstart.jsp",function(g){var h=g.originalEvent.touches[0];a=A(),b=B(),c=h.pageX,d=h.pageY,e=!1,f=!0}).bind("touchmove.jsp",function(g){if(f){var h=g.originalEvent.touches[0],i=db,j=ab;return vb.scrollTo(a+c-h.pageX,b+d-h.pageY),e=e||Math.abs(c-h.pageX)>5||Math.abs(d-h.pageY)>5,i==db&&j==ab}}).bind("touchend.jsp",function(){f=!1}).bind("click.jsp-touchclick",function(){return e?(e=!1,!1):void 0})}function O(){var a=B(),b=A();d.removeClass("jspScrollable").unbind(".jsp"),d.replaceWith(Ab.append(Q.children())),Ab.scrollTop(a),Ab.scrollLeft(b),rb&&clearInterval(rb)}var P,Q,R,S,T,U,V,W,X,Y,Z,$,_,ab,bb,cb,db,eb,fb,gb,hb,ib,jb,kb,lb,mb,nb,ob,pb,qb,rb,sb,tb,ub,vb=this,wb=!0,xb=!0,yb=!1,zb=!1,Ab=d.clone(!1,!1).empty(),Bb=a.fn.mwheelIntent?"mwheelIntent.jsp":"mousewheel.jsp";"border-box"===d.css("box-sizing")?(sb=0,tb=0):(sb=d.css("paddingTop")+" "+d.css("paddingRight")+" "+d.css("paddingBottom")+" "+d.css("paddingLeft"),tb=(parseInt(d.css("paddingLeft"),10)||0)+(parseInt(d.css("paddingRight"),10)||0)),a.extend(vb,{reinitialise:function(b){b=a.extend({},P,b),f(b)},scrollToElement:function(a,b,c){z(a,b,c)},scrollTo:function(a,b,c){y(a,c),x(b,c)},scrollToX:function(a,b){y(a,b)},scrollToY:function(a,b){x(a,b)},scrollToPercentX:function(a,b){y(a*(U-R),b)},scrollToPercentY:function(a,b){x(a*(V-S),b)},scrollBy:function(a,b,c){vb.scrollByX(a,c),vb.scrollByY(b,c)},scrollByX:function(a,b){var c=A()+Math[0>a?"floor":"ceil"](a),d=c/(U-R);t(d*cb,b)},scrollByY:function(a,b){var c=B()+Math[0>a?"floor":"ceil"](a),d=c/(V-S);r(d*_,b)},positionDragX:function(a,b){t(a,b)},positionDragY:function(a,b){r(a,b)},animate:function(a,b,c,d){var e={};e[b]=c,a.animate(e,{duration:P.animateDuration,easing:P.animateEase,queue:!1,step:d})},getContentPositionX:function(){return A()},getContentPositionY:function(){return B()},getContentWidth:function(){return U},getContentHeight:function(){return V},getPercentScrolledX:function(){return A()/(U-R)},getPercentScrolledY:function(){return B()/(V-S)},getIsScrollableH:function(){return Z},getIsScrollableV:function(){return Y},getContentPane:function(){return Q},scrollToBottom:function(a){r(_,a)},hijackInternalLinks:a.noop,destroy:function(){O()}}),f(e)}return d=a.extend({},a.fn.jScrollPane.defaults,d),a.each(["arrowButtonSpeed","trackClickSpeed","keyboardSpeed"],function(){d[this]=d[this]||d.speed}),this.each(function(){var b=a(this),c=b.data("jsp");c?c.reinitialise(d):(a("script",b).filter('[type="text/javascript"],:not([type])').remove(),c=new e(b,d),b.data("jsp",c))})},a.fn.jScrollPane.defaults={showArrows:!1,maintainPosition:!0,stickToBottom:!1,stickToRight:!1,clickOnTrack:!0,autoReinitialise:!1,autoReinitialiseDelay:500,verticalDragMinHeight:0,verticalDragMaxHeight:99999,horizontalDragMinWidth:0,horizontalDragMaxWidth:99999,contentWidth:c,animateScroll:!1,animateDuration:300,animateEase:"linear",hijackInternalLinks:!1,verticalGutter:4,horizontalGutter:4,mouseWheelSpeed:3,arrowButtonSpeed:0,arrowRepeatFreq:50,arrowScrollOnHover:!1,trackClickSpeed:0,trackClickRepeatFreq:70,verticalArrowPositions:"split",horizontalArrowPositions:"split",enableKeyboardNavigation:!0,hideFocus:!1,keyboardSpeed:0,initialDelay:300,speed:30,scrollPagePercent:.8}}(jQuery,this);
+</script>
+<script type="text/javascript">
+var auto_scroll_timer;
+var dom_items;
+var dom_item;
+if($('#fw-feed-items').length) {
+	dom_items = $('#fw-feed-items');
+	dom_item = $('.fw-feed-item');
+} else if ($('#fw-fb-feed-items').length) {
+	dom_items = $('#fw-fb-feed-items');
+	dom_item = $('.fw-fb-feed-item');
+} else if ($('#fw-gc-feed-items').length) {
+	dom_items = $('#fw-gc-feed-items');
+	dom_item = $('.fw-gc-feed-item');
+} else {
+	dom_items = $('#fw-tw-feed-items');
+	dom_item = $('.fw-tw-feed-item');
+}
+
+function auto_scroll_off(){
+	clearInterval(auto_scroll_timer);
+}
+
+function auto_scroll_on(){
+	
+	$('.scroll-pane').jScrollPane().data().jsp.scrollTo(0,0);
+	
+ 	auto_scroll_timer = setInterval(function(){ autoscroll() }, 4 * 1000);
+}
+
+var cnt = 0;
+var mt = 0;
+function autoscroll() {
+	var dom_items;
+	var dom_item;
+	if($('#fw-feed-items').length) {
+		dom_items = $('#fw-feed-items');
+		dom_item = $('.fw-feed-item');
+	} else if ($('#fw-fb-feed-items').length) {
+		dom_items = $('#fw-fb-feed-items');
+		dom_item = $('.fw-fb-feed-item');
+	} else if ($('#fw-gc-feed-items').length) {
+		dom_items = $('#fw-gc-feed-items');
+		dom_item = $('.fw-gc-feed-item');
+	} else {
+		dom_items = $('#fw-tw-feed-items');
+		dom_item = $('.fw-tw-feed-item');
+	}
+	
+	
+		var item_height = dom_item.first().outerHeight(true);
+		dom_items.animate(
+			{ 'marginTop':"-"+item_height+"px", },
+			{
+				complete:function(){
+					dom_item.first().insertAfter(dom_item.last());
+					dom_items.css({'marginTop':'0px'});
+				},
+				duration: 800,
+			}
+		);
+	
+}
+
+// Auto scroll(movie credit)
+function auto_scroll_mc_off() {
+	var dom_items;
+	if($('#fw-feed-items').length) {
+		dom_items = $('#fw-feed-items');
+	} else if ($('#fw-fb-feed-items').length) {
+		dom_items = $('#fw-fb-feed-items');
+	} else if ($('#fw-gc-feed-items').length) {
+		dom_items = $('#fw-gc-feed-items');
+	} else {
+		dom_items = $('#fw-tw-feed-items');
+	}
+	dom_items.pause();
+}
+
+function auto_scroll_mc_on() {
+	var dom_items;
+	if($('#fw-feed-items').length) {
+		dom_items = $('#fw-feed-items');
+	} else if ($('#fw-fb-feed-items').length) {
+		dom_items = $('#fw-fb-feed-items');
+	} else if ($('#fw-gc-feed-items').length) {
+		dom_items = $('#fw-gc-feed-items');
+	} else {
+		dom_items = $('#fw-tw-feed-items');
+	}
+	dom_items.resume();
+}
+
+function auto_scroll_mc_init() {
+	var list_height = 0;
+	var dom_items;
+	var dom_item;
+	if($('#fw-feed-items').length) {
+		dom_items = $('#fw-feed-items');
+		dom_item = $('.fw-feed-item');
+	} else if ($('#fw-fb-feed-items').length) {
+		dom_items = $('#fw-fb-feed-items');
+		dom_item = $('.fw-fb-feed-item');
+	} else if ($('#fw-gc-feed-items').length) {
+		dom_items = $('#fw-gc-feed-items');
+		dom_item = $('.fw-gc-feed-item');
+	} else {
+		dom_items = $('#fw-tw-feed-items');
+		dom_item = $('.fw-tw-feed-item');
+	}
+	dom_item.each(function(i, elem){
+		dom_items.append($(this).clone(true));
+		list_height = list_height + $(this).outerHeight(true);
+	});
+	mcscroll(list_height);
+}
+
+function mcscroll(list_height) {
+	var dur = list_height * 20;
+	var dom_items;
+	var dom_item;
+	if($('#fw-feed-items').length) {
+		dom_items = $('#fw-feed-items');
+		dom_item = $('.fw-feed-item');
+	} else if ($('#fw-fb-feed-items').length) {
+		dom_items = $('#fw-fb-feed-items');
+		dom_item = $('.fw-fb-feed-item');
+	} else if ($('#fw-gc-feed-items').length) {
+		dom_items = $('#fw-gc-feed-items');
+		dom_item = $('.fw-gc-feed-item');
+	} else {
+		dom_items = $('#fw-tw-feed-items');
+		dom_item = $('.fw-tw-feed-item');
+	}
+	
+		dom_items.css({'marginTop':'0px'});
+		dom_items.animate(
+			{ 'marginTop':"-"+list_height+"px", },
+			{
+				complete: function() {
+					dom_items.css({'marginTop':'0px'});
+					mcscroll(list_height);
+				},
+				easing: 'linear',
+				duration: dur,
+			}
+		);
+	
+}
+
+</script>
+<script type="text/javascript">
+/*!
+imgLiquid v0.9.944 / 03-05-2013
+jQuery plugin to resize images to fit in a container.
+Copyright (c) 2012 Alejandro Emparan (karacas) @krc_ale
+Dual licensed under the MIT and GPL licenses
+https://github.com/karacas/imgLiquid
+**/
+/*
+ex:
+	$('.imgLiquid').imgLiquid({fill:true});
+
+	// OPTIONS:
+
+	> js:
+			fill: true,
+			verticalAlign:		// 'center' //	'top'	//	'bottom' // '50%'  // '10%'
+			horizontalAlign:	// 'center' //	'left'	//	'right'  // '50%'  // '10%'
+
+	> CallBacks:
+			onStart:		function(){},
+			onFinish:		function(){},
+			onItemStart:	function(index, container, img){},
+			onItemFinish:	function(index, container, img){}
+
+	> hml5 data attr (overwrite all)
+			data-imgLiquid-fill='true'
+			data-imgLiquid-horizontalAlign='center'
+			data-imgLiquid-verticalAlign='center'
+*/
+//
+
+
+var imgLiquid = imgLiquid || {VER: '0.9.944'};
+imgLiquid.bgs_Available = false;
+imgLiquid.bgs_CheckRunned = false;
+imgLiquid.injectCss = '.imgLiquid img {visibility:hidden}';
+
+
+(function ($) {
+
+	// ___________________________________________________________________
+
+	function checkBgsIsavailable() {
+		if (imgLiquid.bgs_CheckRunned) return;
+		else imgLiquid.bgs_CheckRunned = true;
+
+		var spanBgs = $('<span style="background-size:cover" ></span>');
+		$('body').append(spanBgs);
+
+		!function () {
+			var bgs_Check = spanBgs[0];
+			if (!bgs_Check || !window.getComputedStyle) return;
+			var compStyle = window.getComputedStyle(bgs_Check, null);
+			if (!compStyle || !compStyle.backgroundSize) return;
+			imgLiquid.bgs_Available = (compStyle.backgroundSize === 'cover');
+		}();
+
+		spanBgs.remove();
+	}
+
+
+
+
+
+	// ___________________________________________________________________
+
+	$.fn.extend({
+		imgLiquid: function (options) {
+
+			this.defaults = {
+				fill: true,
+				verticalAlign: 'center',			//	'top'	//	'bottom' // '50%'  // '10%'
+				horizontalAlign: 'center',			//	'left'	//	'right'  // '50%'  // '10%'
+				useBackgroundSize: true,
+				useDataHtmlAttr: true,
+
+				responsive: true,					/* Only for use with BackgroundSize false (or old browsers) */
+				delay: 0,							/* Only for use with BackgroundSize false (or old browsers) */
+				fadeInTime: 0,						/* Only for use with BackgroundSize false (or old browsers) */
+				removeBoxBackground: true,			/* Only for use with BackgroundSize false (or old browsers) */
+				hardPixels: true,					/* Only for use with BackgroundSize false (or old browsers) */
+				responsiveCheckTime: 500,			/* Only for use with BackgroundSize false (or old browsers) */ /* time to check div resize */
+				timecheckvisibility: 500,			/* Only for use with BackgroundSize false (or old browsers) */ /* time to recheck if visible/loaded */
+
+				// CALLBACKS
+				onStart: null,						// no-params
+				onFinish: null,						// no-params
+				onItemStart: null,					// params: (index, container, img )
+				onItemFinish: null,					// params: (index, container, img )
+				onItemError: null					// params: (index, container, img )
+			};
+
+
+			checkBgsIsavailable();
+			var imgLiquidRoot = this;
+
+			// Extend global settings
+			this.options = options;
+			this.settings = $.extend({}, this.defaults, this.options);
+
+			// CallBack
+			if (this.settings.onStart) this.settings.onStart();
+
+
+
+
+			// ___________________________________________________________________
+
+			return this.each(function ($i) {
+
+				// MAIN >> each for image
+
+				var settings = imgLiquidRoot.settings,
+				$imgBoxCont = $(this),
+				$img = $('img:first',$imgBoxCont);
+				if (!$img.length) {onError(); return;}
+
+
+				// Extend settings
+				if (!$img.data('imgLiquid_settings')) {
+					// First time
+					settings = $.extend({}, imgLiquidRoot.settings, getSettingsOverwrite());
+				} else {
+					// Recall
+					// Remove Classes
+					$imgBoxCont.removeClass('imgLiquid_error').removeClass('imgLiquid_ready');
+					settings = $.extend({}, $img.data('imgLiquid_settings'), imgLiquidRoot.options);
+				}
+				$img.data('imgLiquid_settings', settings);
+
+
+				// Start CallBack
+				if (settings.onItemStart) settings.onItemStart($i, $imgBoxCont, $img); /* << CallBack */
+
+
+				// Process
+				if (imgLiquid.bgs_Available && settings.useBackgroundSize)
+					processBgSize();
+				else
+					processOldMethod();
+
+
+				// END MAIN <<
+
+
+
+
+				// ___________________________________________________________________
+
+				function processBgSize() {
+
+					var imgSrc = $img.attr('src');
+
+					// Check change img src
+					if ($imgBoxCont.css('background-image').indexOf(imgSrc) === -1) {
+						// Change
+						$imgBoxCont.css({'background-image': 'url("' + imgSrc + '")'});
+					}
+
+					$imgBoxCont.css({
+						'background-size':		(settings.fill) ? 'cover' : 'contain',
+						'background-position':	(settings.horizontalAlign + ' ' + settings.verticalAlign).toLowerCase(),
+						'background-repeat':	'no-repeat'
+					});
+
+					$('a:first', $imgBoxCont).css({
+						'display':	'block',
+						'width':	'100%',
+						'height':	'100%'
+					});
+
+					$('img', $imgBoxCont).css({'display': 'none'});
+
+					if (settings.onItemFinish) settings.onItemFinish($i, $imgBoxCont, $img); /* << CallBack */
+
+					$imgBoxCont.addClass('imgLiquid_bgSize');
+					$imgBoxCont.addClass('imgLiquid_ready');
+					checkFinish();
+				}
+
+
+
+
+				// ___________________________________________________________________
+
+				function processOldMethod() {
+
+					// Check change img src
+					if ($img.data('oldSrc') && $img.data('oldSrc') !== $img.attr('src')) {
+
+						/* Clone & Reset img */
+						var $imgCopy = $img.clone().removeAttr('style');
+						$imgCopy.data('imgLiquid_settings', $img.data('imgLiquid_settings'));
+						$img.parent().prepend($imgCopy);
+						$img.remove();
+						$img = $imgCopy;
+						$img[0].width = 0;
+
+						// Bug ie with > if (!$img[0].complete && $img[0].width) onError();
+						setTimeout(processOldMethod, 10);
+						return;
+					}
+
+
+					// Reproceess?
+					if ($img.data('imgLiquid_oldProcessed')) {
+						makeOldProcess(); return;
+					}
+
+
+					// Set data
+					$img.data('imgLiquid_oldProcessed', false);
+					$img.data('oldSrc', $img.attr('src'));
+
+
+					// Hide others images
+					$('img:not(:first)', $imgBoxCont).css('display', 'none');
+
+
+					// CSSs
+					$imgBoxCont.css({'overflow': 'hidden'});
+					$img.fadeTo(0, 0).removeAttr('width').removeAttr('height').css({
+						'visibility': 'visible',
+						'max-width': 'none',
+						'max-height': 'none',
+						'width': 'auto',
+						'height': 'auto',
+						'display': 'block'
+					});
+
+
+					// CheckErrors
+					$img.on('error', onError);
+					$img[0].onerror = onError;
+
+
+					// loop until load
+					function onLoad() {
+						if ($img.data('imgLiquid_error') || $img.data('imgLiquid_loaded') || $img.data('imgLiquid_oldProcessed')) return;
+						if ($imgBoxCont.is(':visible') && $img[0].complete && $img[0].width > 0 && $img[0].height > 0) {
+							$img.data('imgLiquid_loaded', true);
+							setTimeout(makeOldProcess, $i * settings.delay);
+						} else {
+							setTimeout(onLoad, settings.timecheckvisibility);
+						}
+					}
+
+
+					onLoad();
+					checkResponsive();
+				}
+
+
+
+
+				// ___________________________________________________________________
+
+				function checkResponsive() {
+
+					/* Only for oldProcessed method (background-size dont need) */
+
+					if (!settings.responsive && !$img.data('imgLiquid_oldProcessed')) return;
+					if (!$img.data('imgLiquid_settings')) return;
+
+					settings = $img.data('imgLiquid_settings');
+
+					$imgBoxCont.actualSize = $imgBoxCont.get(0).offsetWidth + ($imgBoxCont.get(0).offsetHeight / 10000);
+					if ($imgBoxCont.sizeOld && $imgBoxCont.actualSize !== $imgBoxCont.sizeOld) makeOldProcess();
+
+					$imgBoxCont.sizeOld = $imgBoxCont.actualSize;
+					setTimeout(checkResponsive, settings.responsiveCheckTime);
+				}
+
+
+
+
+				// ___________________________________________________________________
+
+				function onError() {
+					$img.data('imgLiquid_error', true);
+					$imgBoxCont.addClass('imgLiquid_error');
+					if (settings.onItemError) settings.onItemError($i, $imgBoxCont, $img); /* << CallBack */
+					checkFinish();
+				}
+
+
+
+
+				// ___________________________________________________________________
+
+				function getSettingsOverwrite() {
+					var SettingsOverwrite = {};
+
+					if (imgLiquidRoot.settings.useDataHtmlAttr) {
+						var dif = $imgBoxCont.attr('data-imgLiquid-fill'),
+						ha =  $imgBoxCont.attr('data-imgLiquid-horizontalAlign'),
+						va =  $imgBoxCont.attr('data-imgLiquid-verticalAlign');
+
+						if (dif === 'true' || dif === 'false') SettingsOverwrite.fill = Boolean (dif === 'true');
+						if (ha !== undefined && (ha === 'left' || ha === 'center' || ha === 'right' || ha.indexOf('%') !== -1)) SettingsOverwrite.horizontalAlign = ha;
+						if (va !== undefined && (va === 'top' ||  va === 'bottom' || va === 'center' || va.indexOf('%') !== -1)) SettingsOverwrite.verticalAlign = va;
+					}
+
+					if (imgLiquid.isIE && imgLiquidRoot.settings.ieFadeInDisabled) SettingsOverwrite.fadeInTime = 0; //ie no anims
+					return SettingsOverwrite;
+				}
+
+
+
+
+
+				// ___________________________________________________________________
+
+				function makeOldProcess() { /* Only for old browsers, or useBackgroundSize seted false */
+
+					// Calculate size
+					var w, h, wn, hn, ha, va, hdif, vdif,
+					margT = 0,
+					margL = 0,
+					$imgCW = $imgBoxCont.width(),
+					$imgCH = $imgBoxCont.height();
+
+
+					// Save original sizes
+					if ($img.data('owidth')	=== undefined) $img.data('owidth',	$img[0].width);
+					if ($img.data('oheight') === undefined) $img.data('oheight', $img[0].height);
+
+
+					// Compare ratio
+					if (settings.fill === ($imgCW / $imgCH) >= ($img.data('owidth') / $img.data('oheight'))) {
+						w = '100%';
+						h = 'auto';
+						wn = Math.floor($imgCW);
+						hn = Math.floor($imgCW * ($img.data('oheight') / $img.data('owidth')));
+					} else {
+						w = 'auto';
+						h = '100%';
+						wn = Math.floor($imgCH * ($img.data('owidth') / $img.data('oheight')));
+						hn = Math.floor($imgCH);
+					}
+
+					// Align X
+					ha = settings.horizontalAlign.toLowerCase();
+					hdif = $imgCW - wn;
+					if (ha === 'left') margL = 0;
+					if (ha === 'center') margL = hdif * 0.5;
+					if (ha === 'right') margL = hdif;
+					if (ha.indexOf('%') !== -1){
+						ha = parseInt (ha.replace('%',''), 10);
+						if (ha > 0) margL = hdif * ha * 0.01;
+					}
+
+
+					// Align Y
+					va = settings.verticalAlign.toLowerCase();
+					vdif = $imgCH - hn;
+					if (va === 'top') margT = 0;
+					if (va === 'center') margT = vdif * 0.5;
+					if (va === 'bottom') margT = vdif;
+					if (va.indexOf('%') !== -1){
+						va = parseInt (va.replace('%',''), 10);
+						if (va > 0) margT = vdif * va * 0.01;
+					}
+
+
+					// Add Css
+					if (settings.hardPixels) {w = wn; h = hn;}
+					$img.css({
+						'width': w,
+						'height': h,
+						'margin-left': Math.floor(margL),
+						'margin-top': Math.floor(margT)
+					});
+
+
+					// FadeIn > Only first time
+					if (!$img.data('imgLiquid_oldProcessed')) {
+						$img.fadeTo(settings.fadeInTime, 1);
+						$img.data('imgLiquid_oldProcessed', true);
+						if (settings.removeBoxBackground) $imgBoxCont.css('background-image', 'none');
+						$imgBoxCont.addClass('imgLiquid_nobgSize');
+						$imgBoxCont.addClass('imgLiquid_ready');
+					}
+
+
+					if (settings.onItemFinish) settings.onItemFinish($i, $imgBoxCont, $img); /* << CallBack */
+					checkFinish();
+				}
+
+
+
+
+				// ___________________________________________________________________
+
+				function checkFinish() { /* Check callBack */
+					if ($i === imgLiquidRoot.length - 1) if (imgLiquidRoot.settings.onFinish) imgLiquidRoot.settings.onFinish();
+				}
+
+
+			});
+		}
+	});
+})(jQuery);
+
+
+
+// Inject css styles ______________________________________________________
+!function () {
+	var css = imgLiquid.injectCss,
+	head = document.getElementsByTagName('head')[0],
+	style = document.createElement('style');
+	style.type = 'text/css';
+	if (style.styleSheet) {
+		style.styleSheet.cssText = css;
+	} else {
+		style.appendChild(document.createTextNode(css));
+	}
+	head.appendChild(style);
+}();
+</script>
+<script type="text/javascript">
+/*
+ * Pause jQuery plugin v0.1
+ *
+ * Copyright 2010 by Tobia Conforto <tobia.conforto@gmail.com>
+ *
+ * Based on Pause-resume-animation jQuery plugin by Joe Weitzel
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the Free
+ * Software Foundation; either version 2 of the License, or(at your option)
+ * any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, write to the Free Software Foundation, Inc., 51
+ * Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+ */
+(function(){var e=jQuery,f="jQuery.pause",d=1,b=e.fn.animate,a={};function c(){return new Date().getTime()}e.fn.animate=function(k,h,j,i){var g=e.speed(h,j,i);g.complete=g.old;return this.each(function(){if(!this[f]){this[f]=d++}var l=e.extend({},g);b.apply(e(this),[k,e.extend({},l)]);a[this[f]]={run:true,prop:k,opt:l,start:c(),done:0}})};e.fn.pause=function(){return this.each(function(){if(!this[f]){this[f]=d++}var g=a[this[f]];if(g&&g.run){g.done+=c()-g.start;if(g.done>g.opt.duration){delete a[this[f]]}else{e(this).stop();g.run=false}}})};e.fn.resume=function(){return this.each(function(){if(!this[f]){this[f]=d++}var g=a[this[f]];if(g&&!g.run){g.opt.duration-=g.done;g.done=0;g.run=true;g.start=c();b.apply(e(this),[g.prop,e.extend({},g.opt)])}})}})();
+</script>
+<script type="text/javascript">
+$(function() {
+	var ActionEnum = { C_OPEN_INIF: 'C_OPEN_INIF'};
+	
+	var dom_title;
+	if ($('.fw-feed-title').length) {
+		dom_title = $('.fw-feed-title');
+	} else if ($('.fw-fb-feed-header-title').length) {
+		dom_title = $('.fw-fb-feed-header-title');
+	} else if ($('.fw-gc-feed-header-title').length) {
+		dom_title = $('.fw-gc-feed-header-title');
+	} else {
+		dom_title = $('.fw-tw-feed-header-title');
+	}
+
+	var dom_container;
+	if ($('#fw-container').length) {
+		dom_container = $('#fw-container');
+	} else if ($('#fw-fb-container').length) {
+		dom_container = $('#fw-fb-container');
+	} else if ($('#fw-gc-container').length) {
+		dom_container = $('#fw-gc-container');
+	} else {
+		dom_container = $('#fw-tw-container');
+	}
+	
+	var dom_scroll_area;
+	if ($('#fw-feed-items-scroll-area').length) {
+		dom_scroll_area = $('#fw-feed-items-scroll-area');
+	} else if ($('#fw-fb-feed-items-scroll-area').length) {
+		dom_scroll_area = $('#fw-fb-feed-items-scroll-area');
+	} else if ($('#fw-gc-feed-items-scroll-area').length) {
+		dom_scroll_area = $('#fw-gc-feed-items-scroll-area');
+	} else {
+		dom_scroll_area = $('#fw-tw-feed-items-scroll-area');
+	}
+
+	var dom_item_image;	
+	if ($('.fw-feed-item-image').length) {
+		dom_item_image = $('.fw-feed-item-image');
+	} else if ($('.fw-fb-feed-item-image').length) {
+		dom_item_image = $('.fw-fb-feed-item-image');
+	} else if ($('.fw-gc-feed-item-image').length) {
+		dom_item_image = $('.fw-gc-feed-item-image');
+	} else if ($('.fw-tw-feed-item-image').length) {
+		dom_item_image = $('.fw-tw-feed-item-image');
+	} else {
+		dom_item_image = $('.fw-tw-feed-item-image');
+	}
+
+	
+	
+	function postToParent(width, height) {
+		var message = {};
+		message.width = width;
+		message.height = height;
+		message.uri=window.location.href;
+		
+		var sources = new Array();
+		
+			var _s = {};
+			_s.source = 'https://news.google.com/news/rss/search/section/q/Makeup%20Trends/Makeup%20Trends?hl=en&gl=US&ned=us';
+			_s.type = '';
+			_s.title = '"Makeup Trends" - Google News';
+			_s.replaceable = 'false';
+			sources.push(_s);
+		
+		message.sources = sources;
+		
+		var target = parent.postMessage ? parent : ( parent.document.postMessage ? parent.document : undefined);
+		if (typeof target != "undefined"){
+			target.postMessage(message , "*");
+		}
+	}
+
+	var init_slick = false;
+	function updateHeight() {
+		var items_height = 0;			for  (var i=0; i<3; i++) {					items_height += $('.fw-feed-item,.fw-fb-feed-item,.fw-gc-feed-item,.fw-tw-feed-item').eq(i).innerHeight();			}
+		$('.scroll-pane').height(items_height);		var cHeight = dom_title.outerHeight() + dom_scroll_area.outerHeight();		cHeight = cHeight - 2;		dom_container.height(cHeight);	}
+
+	function getWidth() {		return "100%";	}
+
+	function getHeight() {
+		var ifHeight = 0;			ifHeight = dom_container.height() + $('.fw-branding').outerHeight(true);					ifHeight = ifHeight + 2;		return ifHeight + 'px';
+	}
+
+	$('.fw-feed-item a').not(".fw-feed-item-url").click(function(e) {
+ 		$(this).attr("target", "_blank");
+    	e.stopPropagation();
+	});
+
+	openWithinIframe = function(thiss, url) {
+		var message = {};
+		message.width = getWidth();
+		message.height = getHeight();
+		message.uri=window.location.href;
+		message.linkUri=url;
+
+		message.action = ActionEnum.C_OPEN_INIF;
+		var target = parent.postMessage ? parent : ( parent.document.postMessage ? parent.document : undefined);
+		if (typeof target != "undefined") {
+			target.postMessage(message , "*");
+		}
+	}
+
+	updateHeight();
+	postToParent(getWidth(), 150);
+
+	setTimeout(function(){
+		updateHeight();
+		postToParent(getWidth(), getHeight());
+			dom_item_image.imgLiquid();			auto_scroll_on();
+			dom_container.hover(
+				function(){
+					auto_scroll_off();
+					$('.jspVerticalBar').css('visibility','visible');
+				},
+				function(){
+					auto_scroll_on();
+					$('.jspVerticalBar').css('visibility','hidden');
+				}
+			);			$('.scroll-pane').bind(
+				'jsp-initialised',
+				function(event, isScrollable){
+					$('.jspVerticalBar').ready(function(){						$('.jspVerticalBar').css('visibility','hidden');						updateHeight();
+						postToParent(getWidth(), getHeight());
+					});
+				}
+			)
+			.jScrollPane({contentWidth: '0px', autoReinitialise: true});		updateHeight();
+		postToParent(getWidth(), getHeight());
+		var wTime = 300;
+		for(var i = 1; i<=7; i++) {
+			setTimeout(function() {
+				updateHeight();
+				postToParent(getWidth(), getHeight());
+			}, wTime);
+			wTime = wTime + 100;
+		}
+	}, 100);
+});
+</script>
+</body></html>
