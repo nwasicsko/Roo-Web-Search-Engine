@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<meta http-equiv='content-type'
+content='application/xhtml+xml; charset=utf-8' />
+<meta http-equiv='content-language' content='en-us' />
+<title>Scrollbar Position</title>
+<style>
+	html,
+body {
+ width: 100%;
+ height: 100%;
+}
+body {
+ font: 12px "Lucida Grande", Arial, sans-serif;
+ background: rgb(189, 189, 189);
+ color: rgb(50, 50, 50);
+ margin: 0;
+ padding: 0;
+}
+div#container {
+ border: 1px solid rgb(64, 64, 64);
+ background: #fff;
+ padding: 5px;
+ margin: 0 20px 0 20px;
+ width: 200px;
+ height: 100px;
+ overflow: auto;
+}
+div.filter{
+ margin: 10px;
+ padding: 5px;
+ width: 400px;
+ height: 150px;
+ background: rgb(200, 200, 255);
+}
+div.status-bar {
+ margin: 5px 20px 5px 20px;
+}
+</style>
+
+</head>
+<script>
+
+$(document).ready(
+ function()
+ {
+ $('div#container')
+ .scroll(
+ function()
+ {
+ $('span#vertical-scroll-value')
+ .text($(this).scrollTop());
+ $('span#horizontal-scroll-value')
+ .text($(this).scrollLeft());
+ }
+ );
+ }
+);
+</script>
+<body>
+ <div id='container'>
+ <div class='filler'>
+ Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+ sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+ nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+ reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+ pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+ culpa qui officia deserunt mollit anim id est laborum.
+ </div>
+ </div>
+ <div class='status-bar'>
+ <span id='vertical-scroll-label'>
+ Current Vertical Scrollbar Position:
+ </span>
+ <span id='vertical-scroll-value'>0</span>
+ </div>
+ <div class='status-bar'>
+ <span id='horizontal-scroll-label'>
+ Current Horizontal Scrollbar Position:
+ </span>
+ <span id='horizontal-scroll-value'>0</span>
+ </div>
+ </body>
+</html>

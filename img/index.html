@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)chrome-extension://gdiimmpmdoofmahingpgabiikimjgcia/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Ben McDonald">
+
+
+    <link rel="stylesheet" href="chrome-extension://gdiimmpmdoofmahingpgabiikimjgcia/css/main.css?1491822453035">
+  </head>
+  <body>
+    <nav>
+        <span>
+            <button type="button" class="indented-buttons" id="show-python"><img class="button-icon" src="chrome-extension://gdiimmpmdoofmahingpgabiikimjgcia/python_icon.png">Python</button>
+            <button type="button" class="indented-buttons" id="show-javascript" disabled="true">JavaScript</button>
+        </span>
+        <span>
+            <button class="small-button" type="button" id="show-about">Options</button>
+        </span>
+    </nav>
+
+    <div class="python-view is-loaded">
+        <div class="loading-area">
+            <div class="loading-text">Loading Python REPL</div>
+        </div>
+        <pre class="input hljs command-history-line"><span class="hljs-keyword">import</span> request</pre><pre class="error hljs command-history-line">No module named request</pre><pre class="input hljs command-history-line"><span class="hljs-keyword">import</span> requests</pre><pre class="error hljs command-history-line">No module named requests</pre><pre class="input hljs command-history-line"><span class="hljs-keyword">import</span> bs4\</pre><pre class="error hljs command-history-line">No module named bs4</pre><pre class="input hljs command-history-line"><span class="hljs-keyword">import</span> bs4</pre><pre class="error hljs command-history-line">No module named bs4</pre><pre class="input hljs command-history-line"><span class="hljs-keyword">import</span> requests</pre><pre class="error hljs command-history-line">No module named requests</pre><pre class="input hljs command-history-line"><span class="hljs-keyword">import</span> urls</pre><pre class="error hljs command-history-line">No module named urls</pre><pre class="input hljs command-history-line">urls = {
+<span class="hljs-meta">... </span><span class="hljs-string">'http://www.httpbin.com/http'</span>,
+<span class="hljs-meta">... </span><span class="hljs-string">'http://www.google.com/'</span>,
+<span class="hljs-meta">... </span><span class="hljs-string">'http://www.yahoo.com/'</span>,
+<span class="hljs-meta">... </span>}
+<span class="hljs-meta">... </span></pre><pre class="output hljs command-history-line">set({'http://www.httpbin.com/http', 'http://www.google.com/', 'http://www.yahoo.com/'})
+</pre><pre class="input hljs command-history-line">urls</pre><pre class="output hljs command-history-line">set({'http://www.httpbin.com/http', 'http://www.google.com/', 'http://www.yahoo.com/'})
+</pre><pre class="input hljs command-history-line">set(urls)</pre><pre class="output hljs command-history-line">set({'http://www.httpbin.com/http', 'http://www.google.com/', 'http://www.yahoo.com/'})
+</pre><pre class="input hljs command-history-line"><span class="hljs-keyword">import</span> chrome</pre><pre class="error hljs command-history-line">No module named chrome</pre><pre class="input hljs command-history-line"><span class="hljs-keyword">import</span> pytest</pre><pre class="error hljs command-history-line">No module named pytest</pre><pre class="input hljs command-history-line"><span class="hljs-keyword">import</span> <span class="hljs-keyword">None</span></pre><pre class="error hljs command-history-line">No module named None</pre><div class="prompt">
+            <div class="prompt-inner">
+                <textarea autocomplete="false" spellcheck="false" class="hljs" autofocus="true" style="height: 2rem;"></textarea>
+                <pre class="hljs python" style=""></pre>
+            </div>
+        </div>
+    </div>
+    <div class="javascript-view is-loaded is-visable">
+        <div class="loading-area">
+            <div class="loading-text">Loading Javascript REPL</div>
+        </div>
+        <pre class="input hljs command-history-line"><span class="hljs-keyword">import</span> js</pre><pre class="error hljs command-history-line">SyntaxError: Unexpected identifier</pre><pre class="input hljs command-history-line"><span class="hljs-built_in">console</span>.log(True)</pre><pre class="error hljs command-history-line">ReferenceError: True is not defined</pre><pre class="input hljs command-history-line"><span class="hljs-built_in">console</span>.log(<span class="hljs-literal">true</span>)</pre><pre class="output hljs command-history-line"></pre><pre class="input hljs command-history-line"><span class="hljs-keyword">var</span> p = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"p"</span>)</pre><pre class="input hljs command-history-line"><span class="hljs-keyword">var</span> p = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"p"</span>)</pre><pre class="input hljs command-history-line">p</pre><pre class="error hljs command-history-line">ReferenceError: p is not defined</pre><pre class="input hljs command-history-line"><span class="hljs-keyword">var</span> p = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"p"</span>)</pre><pre class="input hljs command-history-line">p</pre><pre class="error hljs command-history-line">[object HTMLParagraphElement]</pre><pre class="input hljs command-history-line">p.innerText = <span class="hljs-string">"hello"</span></pre><pre class="output hljs command-history-line">"hello"</pre><pre class="input hljs command-history-line">p</pre><pre class="error hljs command-history-line">[object HTMLParagraphElement]</pre><pre class="input hljs command-history-line">p.value()</pre><pre class="error hljs command-history-line">TypeError: p.value is not a function</pre><pre class="input hljs command-history-line">p.value</pre><pre class="output hljs command-history-line"></pre><pre class="input hljs command-history-line">ptext = p.value</pre><pre class="output hljs command-history-line"></pre><pre class="input hljs command-history-line">ptext.writ(p)</pre><pre class="error hljs command-history-line">TypeError: Cannot read property 'writ' of undefined</pre><pre class="input hljs command-history-line">ptext.write(p)</pre><pre class="error hljs command-history-line">TypeError: Cannot read property 'write' of undefined</pre><pre class="input hljs command-history-line">ptext.dopcumentwrite(p);</pre><pre class="error hljs command-history-line">TypeError: Cannot read property 'dopcumentwrite' of undefined</pre><pre class="input hljs command-history-line">widnow.top()</pre><pre class="error hljs command-history-line">ReferenceError: widnow is not defined</pre><pre class="input hljs command-history-line"><span class="hljs-built_in">window</span>.top()</pre><pre class="error hljs command-history-line">TypeError: window.top is not a function</pre><pre class="input hljs command-history-line"><span class="hljs-built_in">window</span></pre><pre class="error hljs command-history-line">[object Window]</pre><pre class="input hljs command-history-line"><span class="hljs-built_in">window</span>.resize(<span class="hljs-number">40</span>);</pre><pre class="error hljs command-history-line">TypeError: window.resize is not a function</pre><pre class="input hljs command-history-line"><span class="hljs-built_in">window</span>.width(<span class="hljs-number">40</span>);</pre><pre class="error hljs command-history-line">TypeError: window.width is not a function</pre><pre class="input hljs command-history-line">width=<span class="hljs-number">40</span>;</pre><pre class="output hljs command-history-line">40</pre><pre class="input hljs command-history-line"><span class="hljs-built_in">window</span>.width</pre><pre class="output hljs command-history-line">40</pre><pre class="input hljs command-history-line"><span class="hljs-built_in">window</span>.location.redirect.get(<span class="hljs-string">'https://google.com'</span>)</pre><pre class="error hljs command-history-line">TypeError: Cannot read property 'get' of undefined</pre><pre class="input hljs command-history-line"><span class="hljs-built_in">window</span>.location.redirect(<span class="hljs-string">'https://google.com'</span>)</pre><pre class="error hljs command-history-line">TypeError: window.location.redirect is not a function</pre><pre class="input hljs command-history-line">location.redirect(<span class="hljs-string">'https://google.com'</span>)</pre><pre class="error hljs command-history-line">TypeError: location.redirect is not a function</pre><pre class="input hljs command-history-line">top.location.redirect(<span class="hljs-string">'https://google.com'</span>)</pre><pre class="error hljs command-history-line">TypeError: top.location.redirect is not a function</pre><pre class="input hljs command-history-line">top.prototype.value</pre><pre class="error hljs command-history-line">TypeError: Cannot read property 'value' of undefined</pre><pre class="input hljs command-history-line">top.prototype.p</pre><pre class="error hljs command-history-line">TypeError: Cannot read property 'p' of undefined</pre><pre class="input hljs command-history-line">top.prototype.ptext</pre><pre class="error hljs command-history-line">TypeError: Cannot read property 'ptext' of undefined</pre><pre class="input hljs command-history-line"><span class="hljs-keyword">delete</span> p</pre><pre class="output hljs command-history-line">true</pre><pre class="input hljs command-history-line">p</pre><pre class="error hljs command-history-line">ReferenceError: p is not defined</pre><pre class="input hljs command-history-line">undo(p)</pre><pre class="error hljs command-history-line">ReferenceError: undo is not defined</pre><pre class="input hljs command-history-line"><span class="hljs-literal">null</span></pre><pre class="output hljs command-history-line"></pre><pre class="input hljs command-history-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fetchData</span>(<span class="hljs-params"></span>)</span>{
+... var iframe <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'iframe'</span>);
+... iframe.className=<span class="hljs-string">'hiddenDataFeed'</span>;
+... document.body.appendChild(iframe);
+... var src=<span class="hljs-string">'datafeeds/mydata.xml'</span>;
+... loadDataAsynchronously(iframe,src);
+... }</pre><pre class="error hljs command-history-line">SyntaxError: Unexpected identifier</pre><pre class="input hljs command-history-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fetchData</span>(<span class="hljs-params"></span>)</span>{
+... var iframe <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'iframe'</span>);
+... p.innerText=<span class="hljs-string">"Hello"</span>;
+... document.body.appendChild(p);
+... loadDataAsynchronously(iframe,src);
+... }</pre><pre class="error hljs command-history-line">SyntaxError: Unexpected identifier</pre><pre class="input hljs command-history-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fetchData</span>(<span class="hljs-params"></span>)</span>{
+... var iframe <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'iframe'</span>);
+... p.innerText=<span class="hljs-string">"Hello"</span>;
+... document.body.appendChild(p);
+... }</pre><pre class="error hljs command-history-line">SyntaxError: Unexpected identifier</pre><pre class="input hljs command-history-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fetchData</span>(<span class="hljs-params"></span>)</span>{
+... var iframe <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'iframe'</span>);
+... p.innerText=<span class="hljs-string">"Hello"</span>;
+... document.body.append(p);
+... }</pre><pre class="error hljs command-history-line">SyntaxError: Unexpected identifier</pre><pre class="input hljs command-history-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fetchData</span>(<span class="hljs-params"></span>)</span>{
+... var p =<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'p'</span>);
+... p.innerText=<span class="hljs-string">"Hello"</span>;
+... document.body.appendChlid(p);
+... }</pre><pre class="input hljs command-history-line">fetchData()</pre><pre class="error hljs command-history-line">TypeError: document.body.appendChlid is not a function</pre><pre class="input hljs command-history-line">fetchData()</pre><pre class="error hljs command-history-line">TypeError: document.body.appendChlid is not a function</pre><pre class="input hljs command-history-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fetchData</span>(<span class="hljs-params"></span>)</span>{
+... var p =<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'p'</span>);
+... p.innerText=<span class="hljs-string">"Hello"</span>;
+... document.appendChlid(p);
+... }</pre><pre class="input hljs command-history-line">fetchData()</pre><pre class="error hljs command-history-line">TypeError: document.appendChlid is not a function</pre><pre class="input hljs command-history-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fetchData</span>(<span class="hljs-params"></span>)</span>{
+... var p =<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'p'</span>);
+... p.innerText=<span class="hljs-string">"Hello"</span>;
+... p.appendChlid(p.value);
+... }</pre><pre class="input hljs command-history-line">fetchData()</pre><pre class="error hljs command-history-line">TypeError: p.appendChlid is not a function</pre><pre class="input hljs command-history-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fetchData</span>(<span class="hljs-params"></span>)</span>{
+... var p =<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'p'</span>);
+... p.innerText=<span class="hljs-string">"Hello"</span>;
+... body.appendChlid(p.value);
+... }</pre><pre class="input hljs command-history-line">fetchData()</pre><pre class="error hljs command-history-line">ReferenceError: body is not defined</pre><pre class="input hljs command-history-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fetchData</span>(<span class="hljs-params"></span>)</span>{
+... var p =<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'p'</span>);
+... p.innerHTML=<span class="hljs-string">"Hello"</span>;
+... body.appendChlid(p.value);
+... }</pre><pre class="input hljs command-history-line">fetchData()</pre><pre class="error hljs command-history-line">ReferenceError: body is not defined</pre><pre class="input hljs command-history-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fetchData</span>(<span class="hljs-params"></span>)</span>{
+... var p =<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'p'</span>);
+... p.innerHTML=<span class="hljs-string">"Hello"</span>;
+... document.body.appendChlid(p.value);
+... }</pre><pre class="input hljs command-history-line">fetchData()</pre><pre class="error hljs command-history-line">TypeError: document.body.appendChlid is not a function</pre><pre class="input hljs command-history-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fetchData</span>(<span class="hljs-params"></span>)</span>{
+... var p =<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'p'</span>);
+... p.innerHTML=<span class="hljs-string">"Hello"</span>;
+... document.body.appendChild(p.value);
+... }</pre><pre class="input hljs command-history-line">fetchData()</pre><pre class="error hljs command-history-line">TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.</pre><pre class="input hljs command-history-line"><span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"ul"</span>)</pre><pre class="error hljs command-history-line">[object HTMLUListElement]</pre><pre class="input hljs command-history-line"><span class="hljs-keyword">var</span> ul=<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"ul"</span>)</pre><pre class="input hljs command-history-line">ul</pre><pre class="error hljs command-history-line">[object HTMLUListElement]</pre><pre class="input hljs command-history-line">ul.value</pre><pre class="output hljs command-history-line"></pre><div class="prompt">
+            <div class="prompt-inner">
+                <textarea autocomplete="false" spellcheck="false" class="hljs" style="height: 2rem;"></textarea>
+                <pre class="hljs python highlighted-prompt" style=""><span class="hljs-keyword">var</span> list = ul.appendChild(li,<span class="hljs-string">""</span>\n</pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-view">
+        <button type="button" id="clear-console">Clear Console</button>
+        <a class="button" target="_blank" rel="noopener noreferrer" href="chrome-extension://gdiimmpmdoofmahingpgabiikimjgcia/index.html">Open Console in Tab</a>
+        <hr>
+        <a class="button" target="_blank" href="mailto:info@yaks.co.nz?Subject=Chrome%20Python%20Shell%20feeback%20and%20comments" rel="noopener noreferrer">Email Feeback Here</a>
+        <p>
+            Python compiler provided by the <a target="_blank" rel="noopener noreferrer" href="https://github.com/brython-dev/brython/">Brython Library</a> version 3.3.0
+            <!-- __BRYTHON__.version_info -->
+        </p>
+    </div>
+
+<!-- 
+        def raw_input(prompt_string, default_value=""):
+            document['input-prompt'].value = default_value
+            return document['input-prompt'].value
+    <input id="input-prompt" type="text" placeholder="input text"/>
+ -->
+
+    <script type="text/python">
+        import sys
+        import traceback
+        from browser import document
+
+        def raw_input(prompt_string, default_value=""):
+            return default_value or 'Sample user input. Set a second parameter to change the input.'
+
+        def input(prompt_string, default_value=""):
+            return eval('"' + str(raw_input(prompt_string, default_value)) + '"', create_namespace())
+
+        def create_namespace():
+            return {
+            '__name__': '__main__',
+            'raw_input': raw_input,
+            'input': input
+        }  
+
+        # execution namespace
+        editor_ns = create_namespace()
+
+        def detect_raw_input(currentLine):
+            def temp_raw_input(prompt_string, default_value=""):
+                is_raw_input = True
+                temp_raw_input.is_raw_input = True
+
+            temp_raw_input.is_raw_input = False
+
+            ns = {
+                '__name__': '__main__',
+                'raw_input': temp_raw_input,
+                'input': temp_raw_input
+            }
+
+            is_block = False
+            try:
+                _ = eval(currentLine, ns)
+                is_block = False
+            except IndentationError:
+                is_block = True
+            except SyntaxError as msg:
+                if str(msg) == 'invalid syntax : triple string end not found' or \
+                    str(msg).startswith('Unbalanced bracket'):
+                    is_block = True
+                elif str(msg) == 'eval() argument must be an expression':
+                    is_block = False
+                elif str(msg) == 'decorator expects function':
+                    is_block = True
+                else:
+                    is_block = False
+            except:
+                is_block = False
+
+            return temp_raw_input.is_raw_input
+
+        def detect_python_block(currentLine):
+            is_block = False
+            try:
+                _ = eval(currentLine, create_namespace())
+                is_block = False
+            except IndentationError:
+                is_block = True
+            except SyntaxError as msg:
+                if str(msg) == 'invalid syntax : triple string end not found' or \
+                    str(msg).startswith('Unbalanced bracket'):
+                    is_block = True
+                elif str(msg) == 'eval() argument must be an expression':
+                    is_block = False
+                elif str(msg) == 'decorator expects function':
+                    is_block = True
+                else:
+                    is_block = False
+            except:
+                is_block = False
+
+            return is_block
+
+
+        def create_eval_func(callback):
+            def write(data):
+                callback(data, 'output')
+
+            def write_error(data):
+                callback(data, 'error')
+
+            sys.stdout.write = write
+
+            sys.stderr.write = write_error
+
+            def eval_python(currentLine):
+                currentLine += '\n'
+                if len(currentLine.splitlines()) > 2:  # end of block
+                    try:
+                        _ = exec(currentLine, editor_ns)
+                        if _ is not None:
+                            print(repr(_))
+                    except Exception as e:
+                        write_error(e.message or str(e))
+                else:
+                    try:
+                        _ = editor_ns['_'] = eval(currentLine, editor_ns)
+                        if _ is not None:
+                            write(repr(_)+'\n')
+                    except IndentationError as msg:
+                        write_error('IndentationError: ' + (msg.message or str(msg)))
+                    except NameError as msg:
+                        write_error("NameError: name '" + (msg.message or str(msg)) + "' is not defined" )
+                    except SyntaxError as msg:
+                        if str(msg) == 'invalid syntax : triple string end not found' or \
+                            str(msg).startswith('Unbalanced bracket'):
+                            write_error('SyntaxError: ' + (msg.message or str(msg)))
+                        elif str(msg) == 'eval() argument must be an expression':
+                            try:
+                                exec(currentLine, editor_ns)
+                            except Exception as exec_error:
+                                write_error(exec_error.message or str(exec_error))
+                        else:
+                            write_error('SyntaxError: ' + (msg.message or str(msg)))
+                    except Exception as n:
+                        write_error(n.message or str(n))
+
+            def clear():
+                editor_ns = create_namespace()
+
+            return {'eval_python': eval_python, 'clear': clear}
+    </script>
+
+    <script src="chrome-extension://gdiimmpmdoofmahingpgabiikimjgcia/scripts/libs-es5.js"></script>
+    
+    <script src="chrome-extension://gdiimmpmdoofmahingpgabiikimjgcia/scripts/main.js"></script>
+  
+
+</body></html>

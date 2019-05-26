@@ -1,0 +1,316 @@
+<title>Roo</title>
+<meta name="robots" co0ntent="robots.txt" rel="noindex, follow" />
+<script href="javascript/request.js"></script>
+<script href="manifest.json"></script>
+
+<style>
+body { background-color:#F3F3F3; }
+*{margin:0;}
+.logo {
+	font-size:80px;
+	font-family:Noto-Mono;
+	text-align:center;
+	margin:center;
+	padding:none;
+	margin-top:3em;
+	margin-bottom:1px;
+	
+	
+}
+::placeholder {
+	font-size:15px;
+	font-family:sans;
+	color:lightgray;
+}
+.search {
+	height:30px;
+	width:500px;
+	margin: center;
+	margin-bottom: 50px;
+	margin-left: 3em;
+}
+.topnav {
+	text-align:left;
+	
+	margin-right:10px;
+	background-color:black;
+	margin:0;
+	padding:0;
+	bottom:0;
+	top:0;
+	left:0;
+	right:0;
+	height:auto;
+}
+.topnav a {
+	color: white;
+	text-decoration:none;
+	font-weight: 40%;
+	font-size:30px;
+}
+.topnav a:hover {
+	
+	text-decoration: none;
+}
+
+
+
+.footer{
+	border-top: 1px solid lightgray;
+	background-color: #D0D0D0;
+	margin:0;
+	padding:0;
+	text-align: center;
+	bottom:0;
+	top:0;
+	left:0;
+	right:0;
+	height:200px;
+	text-decoration:none;
+}
+.list ul li {
+	text-decoration: none;
+	display:block;
+	margin-left:20px;
+}
+.list li a{
+	text-decoration: none;
+	display:block;
+	color: white;
+	font-family: url('font2u.woff');
+}
+.list li:hover a{
+	text-decoration:underline;
+	padding: 2px;
+	color:black;
+	background: white;
+	width:90px;
+	
+}
+
+.pane2 {
+	background: url(img/snow.jpg) no-repeat fited 10% 0%;
+	
+}
+pane3 {
+	background: url(img/nature.jpg) no-repeat fixed 0% 0%;
+
+}
+pane4 {
+	
+}
+.pane5 a:hover{
+	cursor:pointer;
+}
+#content{
+	display:none;
+}
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9370DB;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #BA55D3;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FF00FF;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+	from{transform:rotate(360deg);}
+	to{transform:rotate(0deg);}
+}
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+@-webkit-keyframes spin {
+  0% { 
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% { 
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(360deg);
+  }
+  50% {
+	  transform:rotate(360deg);
+  }
+  100% {
+	  opacity:0;
+  }
+}
+
+.animate-bottom {
+    position:relative;
+    -webkit-animation-name:animatebottom;
+    -webkit-animation-duration:1s;
+    animation-name:animatebottom;
+    animation-duration:1s
+}
+
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+    display: none;
+    text-align: center;
+}
+.news-container {
+	position:center;
+	
+}
+.news-header {
+	color: white;
+	font-size: 25%;
+	font-family: mono;
+	font-style: thin;
+	background:red;
+}
+.news-feed-header {
+	background-color:white;
+	border-bottom: 1px solid black;
+	font-size: 25%;
+	margin:0 2px 0 0;padding:0 2px 0 0;color:red;line-height:1.5;font-size:16px;overflow:hidden;display:block;
+}
+.news {
+	height:375;
+}
+</style>
+<head>
+	<link rel="shortcut icon" href="img/favicon.png">
+	<link rel="shortcut icon" href="search/get_results.php">
+	
+<meta charset="utf-8" />
+<title>untitled</title>
+<meta name="content" content="html" />
+<meta name="robots" content="noindex, follow" />
+<meta name="robots" content="robots.txt" />
+<meta name="keywords" content="hello, test, world" />
+<meta name="google-site-verification" content="Buzo8l062Y0x4YGOPTPOYXRfTgw9JLn_vmZB7tJG3ZM"/>
+</head>
+<script href="javascript/search.js"></script>
+<script href="javascript/script.js"></script>
+<script href="javascript/script2.js"></script>
+<script href="javascript/conn.js"></script>
+<script nonce="wFwwZD8spRiU+GKH1zGG6Q==" async="">
+function https(){
+google.https=function(){return"https:"==window.location.protocol};
+}
+
+
+</script>
+<script>
+(function(doc){"use strict";var newsletterForm=doc.getElementById("newsletterForm");var isHidden=false;var isArticle=false;if(!newsletterForm){return}else{if(mdn.features.localStorage){isHidden=localStorage.getItem("newsletterHide")==="true"?true:false}if(doc.querySelector("#wikiArticle")){isArticle=true}if(!mdn.features.localStorage||!isArticle){newsletter()}else if(isArticle&&!isHidden){newsletter();newsletterAddHideButton()}else if(isArticle&&isHidden){newsletterHide()}}function newsletter(){var newsletterEmailInput=doc.getElementById("newsletterEmailInput");var newsletterPrivacy=doc.getElementById("newsletterPrivacy");var errorArray=[];var newsletterErrors=doc.getElementById("newsletterErrors");function newsletterError(){if(errorArray.length){showFormErrors(errorArray)}else{newsletterForm.setAttribute("data-skip-xhr",true);newsletterForm.submit()}}function showFormErrors(errorArray){var errorList=doc.createElement("ul");errorList.className="errorlist";for(var i=0,l=errorArray.length;i<l;i++){var item=doc.createElement("li");item.appendChild(doc.createTextNode(errorArray[i]));errorList.appendChild(item)}newsletterErrors.appendChild(errorList);$(newsletterErrors).removeClass("hidden");mdn.analytics.trackEvent({category:"newsletter",action:"progression",label:"error"})}function newsletterThanks(){$(newsletterForm).addClass("hidden");$("#newsletterThanks").removeClass("hidden");$("#newsletterHide").addClass("hidden");mdn.analytics.trackEvent({category:"newsletter",action:"progression",label:"complete"});newsletterSaveHide()}function newsletterSubscribe(event){var skipXHR=newsletterForm.getAttribute("data-skip-xhr");if(skipXHR){mdn.analytics.trackEvent({category:"newsletter",action:"progression",label:"error-forward"});return true}event.preventDefault();event.stopPropagation();mdn.analytics.trackEvent({category:"newsletter",action:"progression",label:"submission"});errorArray=[];$(newsletterErrors).addClass("hidden");while(newsletterErrors.firstChild){newsletterErrors.removeChild(newsletterErrors.firstChild)}var fmt=doc.getElementById("fmt").value;var email=newsletterEmailInput.value;var newsletter=doc.getElementById("newsletterNewslettersInput").value;var privacy=doc.querySelector('input[name="privacy"]:checked')?"&privacy=true":"";var params="email="+encodeURIComponent(email)+"&newsletters="+newsletter+privacy+"&fmt="+fmt+"&source_url="+encodeURIComponent(doc.location.href);var xhr=new XMLHttpRequest;xhr.onload=function(r){if(r.target.status>=200&&r.target.status<300){if(response===null){newsletterError(new Error);return}var response=r.target.response;if(response.success===true){newsletterThanks()}else{if(response.errors){for(var i=0,l=response.errors.length;i<l;i++){errorArray.push(response.errors[i])}}newsletterError(new Error)}}else{newsletterError(new Error)}};xhr.onerror=function(event){newsletterError(event)};var url=newsletterForm.getAttribute("action");xhr.open("POST",url,true);xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");xhr.setRequestHeader("X-Requested-With","XMLHttpRequest");xhr.timeout=5e3;xhr.ontimeout=newsletterError;xhr.responseType="json";xhr.send(params);return false}newsletterForm.addEventListener("submit",newsletterSubscribe,false);newsletterEmailInput.addEventListener("focus",function(){$(newsletterPrivacy).removeClass("hidden");mdn.analytics.trackEvent({category:"newsletter",action:"prompt",label:"focus"})},false)}function newsletterAddHideButton(){var $hideButton=$("#newsletterHide");$hideButton.removeClass("hidden");$hideButton.on("click",newsletterHandleHideClick)}function newsletterHide(){var $newsletterBox=$(".newsletter-box");$newsletterBox.addClass("hidden")}function newsletterSaveHide(){localStorage.setItem("newsletterHide",true)}function newsletterHandleHideClick(){newsletterHide();newsletterSaveHide();mdn.analytics.trackEvent({category:"newsletter",action:"prompt",label:"hide"})}})(document);
+
+</script>
+
+<body>
+
+
+<div class="topnav"><span color="red" style="text-align:left; margin:left; font-size:15px; padding:0; margin:0;">&nbsp;
+<a href="Roo.html">Home</a>&nbsp;&nbsp;&nbsp;
+<a href="login.html">Login</a>
+<br>
+
+</span>
+<div id="nav-dropdown">
+<a href="javascript:void(0)">Service</a>
+<a href="javascript:void(0)">Contacts</a>
+<a href="javascript:void(0)">About</a>
+</div>
+</div>
+
+<div class="logo">
+
+<div class="gsc-control" class="gsc-control-cse" class="gsc-results-close-btn" class="gsc-search-box-tools"></div>
+
+
+
+<form action="http://www.Roo.com" method="GET" target="_" >	
+<wbr><span style="color:red;">R&nbsp;o&nbsp;o&nbsp;</span><br>
+<input type="text" class="search" id="search" name="search" title="Search Roo" autocomplete="off" placeholder="Search Roo Here">
+
+</div>
+
+</form>
+
+
+
+
+
+
+
+
+<hr>
+<div class="news">
+	<center>
+<iframe src="News/a_003.htm" style=" width: 720px; height: 299px; border: none; margin-top:20px;" scrolling="no"></iframe>
+</center>
+</div>
+
+
+
+
+
+</body>
+</html>

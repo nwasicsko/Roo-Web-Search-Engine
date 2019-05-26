@@ -1,0 +1,61 @@
+<link rel="sxlt" href="xml/Transform.xslt">
+<script>
+function GrabNumber(){
+var urlXML='php/PhoneXML.php?q=' + document.Form1.user.value;
+
+
+var urlXSL='Phone.xsl';
+
+var newIMG=document.createElement("img");
+
+newIMG.setAttribute('src', '../img/favicon.png');
+
+document.getElementById("results").appendChild(newIMG);
+
+loadXMLXSLDoc(urlXML,urlXSL,"results");
+}
+</script>
+<script>
+var xmlDoc;
+var xslDoc;
+var objOutput;
+function LoadXMLXSLTDoc(urlXML,urlXSL,elementId){
+	xmlDoc=null;
+	xslDoc=null;
+	objOutput=document.getElementById(
+								elementId),
+	new net.ContentLoader(urlXML,onXMLLoad);
+	new net.ContentLoader(urlXSL,onXSLLoad);
+}
+
+function onXMLLoad(){
+	xmlDoc=this.req.responseXML;
+	doXSL();
+}
+
+function onXMLLoad(){
+	xmlDoc=this.req.responseXML;
+	doXSL();
+}
+function doXSLT(){
+	if (xmlDoc==null || xslDoc==null){ return; }
+	if(window.ActiveXObject){
+		objOutput.innerHTML=xmlDoc.transformNode(xslDoc);		
+	}
+	else{
+		var xsltProcessor = new XSLTProcessor();
+		xsltProcessor.importStylesheet(xslDoc);
+		var fragement = xsltProcessor.transformToFragment(xmlDoc,document);
+		objOutput.innerHTML = "";
+		objOutput.appendChild(fragment);
+	}
+}
+</script>
+<form id="Form1" name="Form1" onsubmit="GrabNumber(); return false;">
+	Name: <input type="text" name="user" autocomplete="yes"/>
+	<input type="submit" name="btnSearch" value="Search"/>
+</form>
+<div id="results"></div>
+
+
+
